@@ -1,20 +1,35 @@
-.navbar-bg {
+.navbar-component {
     background-color: #262626!important;;
 }
 
-.icon-navbar-color {
+.icon-navbar {
     color: #b1b3b6;
 }
 
-.input-navbar-bg {
+.text-main-color {
+    color: #b1b3b6;
+}
+
+.input-navbar {
     background-color: #181818;
-    outline: blue;
     font-size: 12px;
     padding: 8px 8px 8px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+.fw-600 {
     font-weight: 600;
 }
 
-.a {
+.search-icon {
     left: 7px;
     top: 3px;
+}
+
+.badge-navbar {
+    border-radius: 100px;
+    background-color: #202020;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
 }

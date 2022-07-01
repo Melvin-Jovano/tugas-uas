@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import bellSVG from './bell.svg';
 import groupSVG from './group.svg';
 import penSVG from './pen.svg';
+import globeSVG from './globe.svg';
 import homeSVG from './home.svg';
 import searchSVG from './search.svg';
 import {logoSVG} from './logoSVG';
@@ -21,7 +22,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <Fragment>
-                <nav className="navbar-bg">
+                <nav className="navbar-component">
                     <div className="container icon-navbar-color d-flex justify-content-center">
                         <div className="mx-3">
                             <NavLink to={'/'}>
@@ -61,10 +62,34 @@ export default class Navbar extends Component {
 
                         <div className="d-flex align-items-center mx-3">
                             <div className="position-relative">
-                                <div className="position-absolute a">
+                                <div className="position-absolute search-icon">
                                     <img src={searchSVG} alt="" className=""/>
                                 </div>
-                                <input className="input-navbar-bg text-white border-0" placeholder="Search Quora"/>
+                                <input className="fw-600 input-navbar text-white" placeholder="Search Quora"/>
+                            </div>
+                        </div>
+
+                        <div className="d-flex align-items-center mx-3">
+                            <div className="fw-600 text-main-color badge-navbar px-3 py-1">
+                                Try Quora+
+                            </div>
+                        </div>
+
+                        <div className="d-flex align-items-center mx-3">
+                            <div className="">
+                                <img src="https://qph.cf2.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={24} height={24} className="rounded-circle" alt=""/>
+                            </div>
+                        </div>
+
+                        <div className="d-flex align-items-center mx-3">
+                            <div className="">
+                                <img src={globeSVG} width={24} height={24} className="rounded-circle" alt=""/>
+                            </div>
+                        </div>
+
+                        <div className="d-flex align-items-center mx-3">
+                            <div className="">
+                                <img src={globeSVG} width={24} height={24} className="rounded-circle" alt=""/>
                             </div>
                         </div>
                     </div>
