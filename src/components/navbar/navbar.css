@@ -1,0 +1,20 @@
+.navbar-bg {
+    background-color: #262626!important;;
+}
+
+.icon-navbar-color {
+    color: #b1b3b6;
+}
+
+.input-navbar-bg {
+    background-color: #181818;
+    outline: blue;
+    font-size: 12px;
+    padding: 8px 8px 8px 30px;
+    font-weight: 600;
+}
+
+.a {
+    left: 7px;
+    top: 3px;
+}
