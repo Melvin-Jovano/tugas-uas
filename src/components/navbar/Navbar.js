@@ -1,11 +1,11 @@
 import { Component, Fragment } from "react"
 import './navbar.css';
 import { NavLink } from "react-router-dom";
-import bellSVG from './bell.svg';
-import groupSVG from './group.svg';
-import penSVG from './pen.svg';
+import {bellSVG} from './bellSVG';
+import {groupSVG} from './groupSVG';
+import {penSVG} from './penSVG';
 import globeSVG from './globe.svg';
-import homeSVG from './home.svg';
+import {homeSVG} from './homeSVG';
 import arrowBottomSVG from './arrow_bottom.svg';
 import searchSVG from './search.svg';
 import pencilSVG from './pencil.svg';
@@ -18,8 +18,14 @@ export default class Navbar extends Component {
     constructor(props) {
         super();
         this.state = {
-            active : props.activeIndex
+            activeIndex : props.activeIndex
         };
+    }
+
+    setNavClass(index) {
+        let defaultClass = 'd-flex align-items-center px-2 mx-2';
+        if (index === this.state.activeIndex) defaultClass += ' is-active';
+        return defaultClass;
     }
 
     render() {
@@ -48,40 +54,40 @@ export default class Navbar extends Component {
                 <div id="modal-tooltip-remover-navbar" className="d-none modal-tooltip-remover-navbar position-absolute vw-100 vh-100"></div>
 
                 <nav className="navbar-component">
-                    <div className="container d-flex justify-content-center">
+                    <div className="d-flex justify-content-center">
                         <div className="mx-3">
                             <NavLink to={'/'}>
                                 {logoSVG}
                             </NavLink>
                         </div>
 
-                        <div className="d-flex align-items-center mx-3">
+                        <div className={this.setNavClass(1)}>
                             <NavLink to={'/'}>
-                                <img src={homeSVG} alt=""/>
+                                {homeSVG(this.state.activeIndex === 1)}
                             </NavLink>
                         </div>
 
-                        <div className="d-flex align-items-center mx-3">
+                        <div className={this.setNavClass(2)}>
                             <NavLink to={'/'}>
-                                {noteSVG}
+                                {noteSVG(this.state.activeIndex === 2)}
                             </NavLink>
                         </div>
 
-                        <div className="d-flex align-items-center mx-3">
+                        <div className={this.setNavClass(3)}>
                             <NavLink to={'/'}>
-                                <img src={penSVG} alt=""/>
+                                {penSVG(this.state.activeIndex === 3)}
                             </NavLink>
                         </div>
 
-                        <div className="d-flex align-items-center mx-3">
+                        <div className={this.setNavClass(4)}>
                             <NavLink to={'/'}>
-                                <img src={groupSVG} alt=""/>
+                                {groupSVG(this.state.activeIndex === 4)}
                             </NavLink>
                         </div>
 
-                        <div className="d-flex align-items-center mx-3">
+                        <div className={this.setNavClass(5)}>
                             <NavLink to={'/'}>
-                                <img src={bellSVG} alt=""/>
+                                {bellSVG(this.state.activeIndex === 5)}
                             </NavLink>
                         </div>
 

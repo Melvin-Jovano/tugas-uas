@@ -5,7 +5,7 @@ export default class Home extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar />
+                <Navbar activeIndex={1}/>
                 {/* Do Some Shit */}
             </Fragment>
         );
