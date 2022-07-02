@@ -1,0 +1,116 @@
+.welcomeSpace{
+    background-image: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.tribe_welcome_banner_full.png-26-64d500fd69494b66.png);
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: #262626;
+    color: rgb(213, 214, 214);
+}
+
+.welcomeTitle{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.welcomeText{
+    font-size: 13px;
+    color: #b1b3b6;
+}
+
+.welcomeButton{
+    color: #4894fd;
+    border-color: #4894fd;
+    padding: 3px 15px 3px 10px;
+}
+
+.welcomeButton:hover{
+    background-color: rgba(72, 148, 253, 0.06) !important;
+}
+
+.boxTitle{
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(213, 214, 214);
+}
+
+.spacesItem{
+    border: solid 1px #393839;
+    background-color: #262626;
+    border-radius: 10px;
+}
+
+.spacesItemCover{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.spacesItemIcon{
+    left: 38.5%;
+    bottom: 5%;
+}
+
+.spacesItemIconOverlay{
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    transition: ease .3s;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.spacesItemIcon:hover .spacesItemIconOverlay{
+    opacity: 1;
+}
+
+.spacesItemTitle:hover{
+    text-decoration: underline;
+}
+
+.popItem{
+    z-index: 1500;
+    border: solid 1px #393839;
+    background-color: #262626;
+    border-radius: 10px;
+    right: -27%;
+}
+
+.popItemCover{
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    height: 24px;
+    width: 100%;
+}
+
+.popItemIconWrap{
+    height: 48px;
+    width: 48px;
+    margin-right: 16px;
+}
+
+.popItemIcon{
+    width: 100%;
+    outline: inset;
+    border-radius: 33.33%;
+    bottom: 15%;
+    left: 0;
+}
+
+.followButton:hover{
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.shareIcon{
+    top: 15%;
+    left: 15%;
+}
+
+.popIcon:hover{
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.dotsIcon{
+    top: 12%;
+    left: 10%;
+}

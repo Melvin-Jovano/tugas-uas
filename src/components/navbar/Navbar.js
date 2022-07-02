@@ -49,7 +49,7 @@ export default class Navbar extends Component {
                         </div>
 
                         <div className="d-flex align-items-center mx-3">
-                            <NavLink to={'/'}>
+                            <NavLink to={'/spaces'}>
                                 <img src={groupSVG} alt=""/>
                             </NavLink>
                         </div>
