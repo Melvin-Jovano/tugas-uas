@@ -80,7 +80,7 @@ export default class Navbar extends Component {
                         </div>
 
                         <div className={this.setNavClass(4)}>
-                            <NavLink to={'/'}>
+                            <NavLink to={'/spaces'}>
                                 {groupSVG(this.state.activeIndex === 4)}
                             </NavLink>
                         </div>
