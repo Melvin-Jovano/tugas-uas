@@ -107,15 +107,11 @@ export default class Navbar extends Component {
                         </div>
 
                         <div className="d-flex align-items-center mx-2">
-                            <div className="">
-                                <img src="https://qph.cf2.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={24} height={24} className="rounded-circle" alt=""/>
-                            </div>
+                            <img src="https://qph.cf2.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={24} height={24} className="rounded-circle" alt=""/>
                         </div>
 
                         <div className="d-flex align-items-center mx-2">
-                            <div className="">
-                                <img src={globeSVG} width={24} height={24} className="rounded-circle" alt=""/>
-                            </div>
+                            <img src={globeSVG} width={24} height={24} className="rounded-circle" alt=""/>
                         </div>
 
                         <div className="d-flex align-items-center mx-2">

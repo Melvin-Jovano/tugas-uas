@@ -1,0 +1,41 @@
+.text-color-space {
+    color: #B1B3B6;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.content {
+    width: 40%;
+}
+
+.post-content {
+    background-color: #262626;
+    border: 1px solid #262626;
+    color: #B1B3B6;
+}
+
+.post-content:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.post-button:hover {
+    background-color: #FFFFFF0A;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.input-post {
+    background-color: #202020;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    font-size: 15px;
+    color: #8E9092;
+    font-weight: 450;
+    cursor: pointer;
+}
