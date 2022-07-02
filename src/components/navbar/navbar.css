@@ -1,30 +1,30 @@
 .navbar-component {
-    background-color: #262626!important;;
+    background-color: #262626!important;
 }
 
-.icon-navbar {
-    color: #b1b3b6;
-}
-
-.text-main-color {
+.text-main-color-navbar {
     color: #b1b3b6;
 }
 
 .input-navbar {
     background-color: #181818;
     font-size: 12px;
+    width: 280px;
     padding: 8px 8px 8px 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
 }
 
 .fw-600 {
     font-weight: 600;
 }
 
-.search-icon {
-    left: 7px;
-    top: 3px;
+.search-icon-navbar {
+    left: 8px;
+    top: 4px;
+}
+
+.is-active {
+    border-bottom: 4px solid #f52936;
 }
 
 .badge-navbar {
@@ -32,4 +32,35 @@
     background-color: #202020;
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 13px;
+}
+
+.button-tooltip-navbar {
+    background-color: #f52936;
+    font-size: 13px;
+    border-radius: 100px;
+}
+
+.tooltip-badge-navbar {
+    background-color: #262626;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    bottom: -32px;
+    right: -35px;
+    color: #D5D6D6;
+    z-index: 2;
+}
+
+.pointer-tooltip-navbar {
+    color: #262626;
+    top: -10px;
+    right: 50px;
+    transform: rotate(30deg);
+}
+
+.modal-tooltip-remover-navbar {
+    z-index: 1;
+}
+
+.modal-create-post-navbar {
+    background-color: #393839;;
 }
