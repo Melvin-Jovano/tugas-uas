@@ -43,7 +43,7 @@ export default class Space extends Component {
                 </div>
 
                 <div className="text-break pb-4">
-                    About · Careers · Terms · Privacy · Acceptable Use · Businesses · Press · Your Ad Choices
+                    <span className="space-link">About</span> ·  <span className="space-link">Careers</span> · <span className="space-link">Terms</span> · <span className="space-link">Privacy</span> · <span className="space-link">Acceptable Use</span> · <span className="space-link">Businesses</span> · <span className="space-link">Press</span> · <span className="space-link">Your Ad Choices</span>
                 </div>
             </div>
         );

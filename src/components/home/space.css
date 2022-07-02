@@ -45,6 +45,15 @@
     box-shadow: rgb(255 255 255 / 10%) 0px 0px 10px 10px inset;
 }
 
+.space-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.space-link {
+    font-size: 13.5px;
+}
+
 .space-container::-webkit-scrollbar-thumb {
     border-radius: 9999em;
     box-shadow: transparent 0px 0px 10px 10px inset;
