@@ -118,13 +118,13 @@
 
 .upvote-button {
     background-color: rgb(53, 53, 53);
-    border-radius: 20px 0 0 20px;
+    border-radius: 50px 0 0 50px;
 
 }
 
 .downvote-button {
     background-color: rgb(53, 53, 53);
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 50px 50px 0;
 }
 
 .button-divider {
@@ -156,5 +156,31 @@
     top: -38px;
     left: -140%;
     right: -127%;
+    background-color: #404040;
+}
+
+.comment-tooltips {
+    top: -38px;
+    left: 0;
+    right: 4%;
+    background-color: #404040;
+}
+
+.refresh-tooltips {
+    top: -38px;
+    left: 20%;
+    right: 17%;
+    background-color: #404040;
+}
+
+.downvote-tooltips {
+    top: -38px;
+    left: 16.5%;
+    background-color: #404040;
+}
+
+.upvote-tooltips {
+    top: -38px;
+    left: 2.5%;
     background-color: #404040;
 }

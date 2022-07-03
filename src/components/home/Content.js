@@ -96,7 +96,7 @@ export default class Content extends Component {
                             </div>
                         </div>
 
-                        <div className="cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">Why didn't Einstein's descendants inherit his IQ?</div>
+                        <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">Why didn't Einstein's descendants inherit his IQ?</div>
                     </div>
 
                     <div className="text-color-title fs-15px fw-600 pb-3 px-3">
@@ -131,26 +131,64 @@ export default class Content extends Component {
 
                     <div className="pb-3 px-3 position-relative">
                         <div className="d-flex">
-                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center p-3 px-2 py-2 fw-600"> 
-                                <img src={upvoteSVG} alt=""/>&nbsp;20K
+                            <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none" id="upvote-tooltip-1" data-tooltip="upvote-tooltip-1">
+                                &nbsp;Upvote&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
                             </div>
+
+                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center px-3 py-2 fw-600 upvote-tooltip" data-tooltip="upvote-tooltip-1"> 
+                                <img data-tooltip="upvote-tooltip-1" src={upvoteSVG} alt=""/>&nbsp;20K
+                            </div>
+
                             <div className="d-flex align-items-center button-divider">
                                 |
                             </div>
-                            <div className="cursor-pointer downvote-button d-flex align-items-center p-3 px-2 py-2">
-                                <img src={downvoteSVG} alt=""/>
+
+                            <div className="fw-600 text-color-description fs-13px position-absolute downvote-tooltips rounded p-1 text-center d-none" id="downvote-tooltip-1" data-tooltip="downvote-tooltip-1">
+                                &nbsp;Downvote&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
                             </div>
 
-                            <div className="cursor-pointer d-flex align-items-center p-3 px-2 py-2 text-color-description fw-600 interaction-button mx-1 fs-14px">
-                                <img src={refreshSVG} alt=""/>&nbsp;93
+                            <div className="cursor-pointer downvote-button d-flex align-items-center px-3 py-2 downvote-tooltip" data-tooltip="downvote-tooltip-1">
+                                <img data-tooltip="downvote-tooltip-1" src={downvoteSVG} alt=""/>
                             </div>
 
-                            <div className="cursor-pointer d-flex align-items-center p-3 px-2 py-2 text-color-description fw-600 interaction-button mx-1 fs-14px">
-                                <img src={chatSVG} alt=""/>&nbsp;81
+                            &nbsp;
+
+                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative refresh-tooltip" data-tooltip="refresh-tooltip-1">
+                                <div className="fw-600 fs-13px position-absolute refresh-tooltips rounded p-1 text-center d-none" id="refresh-tooltip-1" data-tooltip="refresh-tooltip-1">
+                                    Share
+                                    <div className="position-absolute pointer-tooltip-write">
+                                        <FaPlay style={{color : '#404040'}}/>
+                                    </div>
+                                </div>
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip="refresh-tooltip-1">
+                                    <img  data-tooltip="refresh-tooltip-1" src={refreshSVG} alt=""/>&nbsp;93
+                                </div>
+                            </div>
+
+                            &nbsp;
+
+                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative comment-tooltip" data-tooltip="comment-tooltip-1">
+                                <div className="fw-600 fs-13px position-absolute comment-tooltips rounded p-1 text-center d-none" id="comment-tooltip-1" data-tooltip="comment-tooltip-1">
+                                    Comment
+                                    <div className="position-absolute pointer-tooltip-write">
+                                        <FaPlay style={{color : '#404040'}}/>
+                                    </div>
+                                </div>
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip="comment-tooltip-1">
+                                    <img data-tooltip="comment-tooltip-1" src={chatSVG} alt=""/>&nbsp;81
+                                </div>
                             </div>
 
                             <div className="position-absolute more-actions d-flex align-items-center px-3">
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative">
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative share-tooltip" data-tooltip="share-tooltip-1">
                                     <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none" id="share-tooltip-1">
                                         More sharing option
                                         <div className="position-absolute pointer-tooltip-write">
@@ -163,7 +201,7 @@ export default class Content extends Component {
 
                                 &nbsp;
 
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative">
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative more-tooltip" data-tooltip="more-tooltip-1">
                                     <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none" id="more-tooltip-1">
                                         More
                                         <div className="position-absolute pointer-tooltip-write">
