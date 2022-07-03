@@ -24,10 +24,12 @@ export default class Content extends Component {
     
     render() {
         const data = this.state.data.map((data, index) => {
+            const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
+
             return (
                 <div className="w-100 my-2 contents rounded" key={index}>
                     <div className="pt-3 px-3">
-                        <div className="position-relative writer">
+                        <div className="position-relative writer mb-2">
 
                             <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" id={`hide-tooltip-${index}`} data-tooltip={`hide-tooltip-${index}`}>
                                 &nbsp;Hide&nbsp;
@@ -79,10 +81,19 @@ export default class Content extends Component {
                             </div>
                         </div>
 
-                        <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div>
+                        {title}
+
                     </div>
 
                     <div dangerouslySetInnerHTML={{__html : data.desc}}></div>
+                    
+                    <div className="text-color-footer-post fs-13px pb-1 fw-600 px-3">
+                        {data.views} views
+                        &nbsp;·&nbsp;
+                        <span className="cursor-pointer hover-underline">View {data.upvoted} upvotes</span>
+                        &nbsp;·&nbsp;
+                        <span className="cursor-pointer hover-underline">View {data.shares} shares</span>
+                    </div>
 
                     <div className="pb-1 px-3 position-relative">
                         <div className="d-flex">
