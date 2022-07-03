@@ -69,7 +69,7 @@ export default class Navbar extends Component {
                             </div>
 
                             <div className={this.setNavClass(2)}>
-                                <NavLink to={'/'}>
+                                <NavLink to={'/following'}>
                                     {noteSVG(this.state.activeIndex === 2)}
                                 </NavLink>
                             </div>
