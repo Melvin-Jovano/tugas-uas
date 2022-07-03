@@ -9,7 +9,7 @@ class spaces extends React.Component{
     render(){
         return(
             <Fragment>
-                <Navbar/>
+                <Navbar activeIndex={4}/>
                 <div className="container px-4 pb-4" style={{paddingTop:30, width:1050}}>
                     <div className="d-flex">
                         <div className="content">
