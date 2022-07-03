@@ -77,7 +77,7 @@ export default class Content extends Component {
                                                 &nbsp;
                                                 
                                                 <div className="position-relative d-inline-block">
-                                                    <div className="position-absolute a rounded p-1 text-center d-none" id="tooltip-1">
+                                                    <div className="position-absolute writer-tooltips rounded p-1 text-center d-none" id="tooltip-1">
                                                         Moderator
                                                         <div className="position-absolute pointer-tooltip-write">
                                                             <FaPlay style={{color : '#404040'}}/>
@@ -149,15 +149,29 @@ export default class Content extends Component {
                                 <img src={chatSVG} alt=""/>&nbsp;81
                             </div>
 
-                            <div className="position-absolute more-action d-flex align-items-center px-3">
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2">
-                                    <img src={shareSVG} alt="" />
+                            <div className="position-absolute more-actions d-flex align-items-center px-3">
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative">
+                                    <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none" id="share-tooltip-1">
+                                        More sharing option
+                                        <div className="position-absolute pointer-tooltip-write">
+                                            <FaPlay style={{color : '#404040'}}/>
+                                        </div>
+                                    </div>
+
+                                    <img className="share-tooltip" data-tooltip="share-tooltip-1" src={shareSVG} alt="" />
                                 </div>
 
                                 &nbsp;
 
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2">
-                                    <img src={moreSVG} alt="" />
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative">
+                                    <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none" id="more-tooltip-1">
+                                        More
+                                        <div className="position-absolute pointer-tooltip-write">
+                                            <FaPlay style={{color : '#404040'}}/>
+                                        </div>
+                                    </div>
+
+                                    <img className="more-tooltip" data-tooltip="more-tooltip-1" src={moreSVG} alt="" />
                                 </div>
                             </div>
                         </div>

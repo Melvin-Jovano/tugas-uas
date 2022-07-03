@@ -98,8 +98,8 @@
     font-size: 15px;
 }
 
-.a {
-    top: -33px;
+.writer-tooltips {
+    top: -36px;
     left: -190%;
     right: -160%;
     background-color: #404040;
@@ -141,6 +141,20 @@
     border-radius: 30px;
 }
 
-.more-action {
+.more-actions {
     right: 0;
+}
+
+.more-tooltips {
+    top: -38px;
+    left: -20%;
+    right: -12%;
+    background-color: #404040;
+}
+
+.share-tooltips {
+    top: -38px;
+    left: -140%;
+    right: -127%;
+    background-color: #404040;
 }
