@@ -119,8 +119,6 @@ export default class Content extends Component {
                     <div className="text-color-title fs-15px fw-600 pb-3">
                         <img src={'https://qph.fs.quoracdn.net/main-qimg-e3629b94eb87f753d6d5bb9d68c8327c-pjlq'} className="img-fluid" alt=""/>
                     </div>
-
-                    
                     
                     <div className="text-color-title fs-15px pb-3 fw-600 px-3">
                         Hans was probably extremely smart, but he didn't achieve as much as his father and grandfather did.
@@ -130,7 +128,7 @@ export default class Content extends Component {
                         Some of his descendants may have his IQ, or even exceed it, but they are not Albert. Albert Einstein was unique.
                     </div>
 
-                    <div className="text-color-footer-post fs-13px pb-3 fw-600 px-3">
+                    <div className="text-color-footer-post fs-13px pb-1 fw-600 px-3">
                         368.1K views
                         &nbsp;·&nbsp;
                         <span className="cursor-pointer hover-underline">View 7,823 upvotes</span>
@@ -138,7 +136,7 @@ export default class Content extends Component {
                         <span className="cursor-pointer hover-underline">View 19 shares</span>
                     </div>
 
-                    <div className="pb-3 px-3 position-relative">
+                    <div className="pb-1 px-3 position-relative">
                         <div className="d-flex">
                             <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none" id="upvote-tooltip-1" data-tooltip="upvote-tooltip-1">
                                 &nbsp;Upvote&nbsp;
@@ -205,7 +203,7 @@ export default class Content extends Component {
                                         </div>
                                     </div>
 
-                                    <img className="share-tooltip" data-tooltip="share-tooltip-1" src={shareSVG} alt="" />
+                                    <img data-tooltip="share-tooltip-1" src={shareSVG} alt="" />
                                 </div>
 
                                 &nbsp;
@@ -218,7 +216,7 @@ export default class Content extends Component {
                                         </div>
                                     </div>
 
-                                    <img className="more-tooltip" data-tooltip="more-tooltip-1" src={moreSVG} alt="" />
+                                    <img data-tooltip="more-tooltip-1" src={moreSVG} alt="" />
                                 </div>
                             </div>
                         </div>
