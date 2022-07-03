@@ -53,9 +53,18 @@ export default class Content extends Component {
                 <div className="w-100 my-2 contents rounded">
                     <div className="pt-3 px-3">
                         <div className="position-relative writer">
-                            <div className="position-absolute hide-post p-1">
-                                <img src={timesSVG} alt=""/>
+
+                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" id="hide-tooltip-1" data-tooltip="hide-tooltip-1">
+                                &nbsp;Hide&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
                             </div>
+
+                            <div className="position-absolute hide-post p-1 hide-tooltip" data-tooltip="hide-tooltip-1">
+                                <img data-tooltip="hide-tooltip-1" src={timesSVG} alt=""/>
+                            </div>
+
                             <div className="text-color-title fs-13px">
                                 <table>
                                     <tbody>

@@ -36,4 +36,8 @@ $(document).ready(() => {
     $('.comment-tooltip').hover((element) => {
         $(`#${element.target.getAttribute('data-tooltip')}`).toggleClass('d-none');
     });
+
+    $('.hide-tooltip').hover((element) => {
+        $(`#${element.target.getAttribute('data-tooltip')}`).toggleClass('d-none');
+    });
 });
