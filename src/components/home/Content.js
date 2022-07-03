@@ -4,6 +4,7 @@ import answerSVG from './answer.svg';
 import penSVG from './pen.svg';
 import timesSVG from './times.svg';
 import modSVG from './mod.svg';
+import adminSVG from './admin.svg';
 import upvoteSVG from './upvote.svg';
 import downvoteSVG from './downvote.svg';
 import chatSVG from './chat.svg';
@@ -22,6 +23,155 @@ export default class Content extends Component {
     }
     
     render() {
+        const data = this.state.data.map((data, index) => {
+            return (
+                <div className="w-100 my-2 contents rounded" key={index}>
+                    <div className="pt-3 px-3">
+                        <div className="position-relative writer">
+
+                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" id={`hide-tooltip-${index}`} data-tooltip={`hide-tooltip-${index}`}>
+                                &nbsp;Hide&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
+                            </div>
+
+                            <div className="position-absolute hide-post p-1 hide-tooltip" data-tooltip={`hide-tooltip-${index}`}>
+                                <img data-tooltip={`hide-tooltip-${index}`} src={timesSVG} alt=""/>
+                            </div>
+
+                            <div className="text-color-title fs-13px">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td rowSpan={2}>
+                                                <img width={36} height={36} src={data.writerImg} alt="" className="img-writer"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;
+                                                <span className="fw-bold cursor-pointer hover-underline">{data.space}</span>
+                                                &nbsp;·&nbsp;
+                                                <span className="fw-bold cursor-pointer hover-underline text-color-link">Follow</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="text-color-description fw-550">
+                                                &nbsp;&nbsp;Posted by&nbsp;
+                                                <span className="cursor-pointer hover-underline">{data.writer}</span>
+                                                &nbsp;
+                                                <div className={`position-relative d-inline-block ${data.isMod != null || data.isAdmin != null ? '' : 'd-none'}`}>
+                                                    <div className="position-absolute writer-tooltips rounded p-1 text-center d-none" id={`tooltip-${index}`}>
+                                                        {data.isMod ? 'Moderator' : 'Admin'}
+                                                        <div className="position-absolute pointer-tooltip-write">
+                                                            <FaPlay style={{color : '#404040'}}/>
+                                                        </div>
+                                                    </div>
+                                                    <img className="writer-tooltip" data-tooltip={`tooltip-${index}`} src={data.isMod ? modSVG : adminSVG} alt=""/>
+                                                </div>
+                                                
+                                                &nbsp;·&nbsp;
+                                                <span className="cursor-pointer hover-underline">{data.createdAt}</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+
+                        <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div>
+                    </div>
+
+                    <div dangerouslySetInnerHTML={{__html : data.desc}}></div>
+
+                    <div className="pb-1 px-3 position-relative">
+                        <div className="d-flex">
+                            <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none" id={`upvote-tooltip-${index}`} data-tooltip={`upvote-tooltip-${index}`}>
+                                &nbsp;Upvote&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
+                            </div>
+
+                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center px-3 py-2 fw-600 upvote-tooltip" data-tooltip={`upvote-tooltip-${index}`}> 
+                                <img data-tooltip={`upvote-tooltip-${index}`} src={upvoteSVG} alt=""/>&nbsp;{data.upvote}
+                            </div>
+
+                            <div className="d-flex align-items-center button-divider">
+                                |
+                            </div>
+
+                            <div className="fw-600 text-color-description fs-13px position-absolute downvote-tooltips rounded p-1 text-center d-none" id={`downvote-tooltip-${index}`} data-tooltip={`downvote-tooltip-${index}`}>
+                                &nbsp;Downvote&nbsp;
+                                <div className="position-absolute pointer-tooltip-write">
+                                    <FaPlay style={{color : '#404040'}}/>
+                                </div>
+                            </div>
+
+                            <div className="cursor-pointer downvote-button d-flex align-items-center px-3 py-2 downvote-tooltip" data-tooltip={`downvote-tooltip-${index}`}>
+                                <img data-tooltip={`downvote-tooltip-${index}`} src={downvoteSVG} alt=""/>
+                            </div>
+
+                            &nbsp;
+
+                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative refresh-tooltip" data-tooltip={`refresh-tooltip-${index}`}>
+                                <div className="fw-600 fs-13px position-absolute refresh-tooltips rounded p-1 text-center d-none" id={`refresh-tooltip-${index}`} data-tooltip={`refresh-tooltip-${index}`}>
+                                    Share
+                                    <div className="position-absolute pointer-tooltip-write">
+                                        <FaPlay style={{color : '#404040'}}/>
+                                    </div>
+                                </div>
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip={`refresh-tooltip-${index}`}>
+                                    <img  data-tooltip={`refresh-tooltip-${index}`} src={refreshSVG} alt=""/>&nbsp;{data.shared}
+                                </div>
+                            </div>
+
+                            &nbsp;
+
+                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative comment-tooltip" data-tooltip={`comment-tooltip-${index}`}>
+                                <div className="fw-600 fs-13px position-absolute comment-tooltips rounded p-1 text-center d-none" id={`comment-tooltip-${index}`} data-tooltip={`comment-tooltip-${index}`}>
+                                    Comment
+                                    <div className="position-absolute pointer-tooltip-write">
+                                        <FaPlay style={{color : '#404040'}}/>
+                                    </div>
+                                </div>
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip={`comment-tooltip-${index}`}>
+                                    <img data-tooltip={`comment-tooltip-${index}`} src={chatSVG} alt=""/>&nbsp;{data.comments}
+                                </div>
+                            </div>
+
+                            <div className="position-absolute more-actions d-flex align-items-center px-3">
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative share-tooltip" data-tooltip={`share-tooltip-${index}`}>
+                                    <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none" id={`share-tooltip-${index}`}>
+                                        More sharing option
+                                        <div className="position-absolute pointer-tooltip-write">
+                                            <FaPlay style={{color : '#404040'}}/>
+                                        </div>
+                                    </div>
+
+                                    <img data-tooltip={`share-tooltip-${index}`} src={shareSVG} alt="" />
+                                </div>
+
+                                &nbsp;
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative more-tooltip" data-tooltip={`more-tooltip-${index}`}>
+                                    <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none" id={`more-tooltip-${index}`}>
+                                        More
+                                        <div className="position-absolute pointer-tooltip-write">
+                                            <FaPlay style={{color : '#404040'}}/>
+                                        </div>
+                                    </div>
+
+                                    <img data-tooltip={`more-tooltip-${index}`} src={moreSVG} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
 
         return (
             <div className="mx-2 content">
@@ -50,178 +200,8 @@ export default class Content extends Component {
 
                 </div>
 
-                <div className="w-100 my-2 contents rounded">
-                    <div className="pt-3 px-3">
-                        <div className="position-relative writer">
+                {data}
 
-                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" id="hide-tooltip-1" data-tooltip="hide-tooltip-1">
-                                &nbsp;Hide&nbsp;
-                                <div className="position-absolute pointer-tooltip-write">
-                                    <FaPlay style={{color : '#404040'}}/>
-                                </div>
-                            </div>
-
-                            <div className="position-absolute hide-post p-1 hide-tooltip" data-tooltip="hide-tooltip-1">
-                                <img data-tooltip="hide-tooltip-1" src={timesSVG} alt=""/>
-                            </div>
-
-                            <div className="text-color-title fs-13px">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td rowSpan={2}>
-                                                <img width={36} height={36} src="https://qph.fs.quoracdn.net/main-thumb-ti-2738051-50-bkvamefuhxabguyfxkswiozunlnidfxf.jpeg" alt="" className="img-writer"/>
-                                            </td>
-                                            <td>
-                                                &nbsp;&nbsp;
-                                                <span className="fw-bold cursor-pointer hover-underline">Info Orb</span>
-                                                &nbsp;·&nbsp;
-                                                <span className="fw-bold cursor-pointer hover-underline text-color-link">Follow</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-color-description fw-550">
-                                                &nbsp;&nbsp;Posted by&nbsp;
-                                                <span className="cursor-pointer hover-underline">Josephine D. Leslie</span>
-                                                &nbsp;
-                                                
-                                                <div className="position-relative d-inline-block">
-                                                    <div className="position-absolute writer-tooltips rounded p-1 text-center d-none" id="tooltip-1">
-                                                        Moderator
-                                                        <div className="position-absolute pointer-tooltip-write">
-                                                            <FaPlay style={{color : '#404040'}}/>
-                                                        </div>
-                                                    </div>
-                                                    <img className="writer-tooltip" data-tooltip="tooltip-1" src={modSVG} alt=""/>
-                                                </div>
-                                                
-                                                &nbsp;·&nbsp;
-                                                <span className="cursor-pointer hover-underline">Jun 7</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                            </div>
-                        </div>
-
-                        <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">Why didn't Einstein's descendants inherit his IQ?</div>
-                    </div>
-
-                    <div className="text-color-title fs-15px fw-600 pb-3 px-3">
-                        Yes they did.
-                        <br /><br />
-                        His, and Mileva's too.
-                        <br /><br />
-                        Hans Albert Einstein was so good at hydraulic engineering that an award was even named after him.
-                    </div>
-
-                    <div className="text-color-title fs-15px fw-600 pb-3">
-                        <img src={'https://qph.fs.quoracdn.net/main-qimg-e3629b94eb87f753d6d5bb9d68c8327c-pjlq'} className="img-fluid" alt=""/>
-                    </div>
-                    
-                    <div className="text-color-title fs-15px pb-3 fw-600 px-3">
-                        Hans was probably extremely smart, but he didn't achieve as much as his father and grandfather did.
-                        <br /><br />
-                        What they probably didn't inherit was Albert's unusual brain structure.
-                        <br /><br />
-                        Some of his descendants may have his IQ, or even exceed it, but they are not Albert. Albert Einstein was unique.
-                    </div>
-
-                    <div className="text-color-footer-post fs-13px pb-1 fw-600 px-3">
-                        368.1K views
-                        &nbsp;·&nbsp;
-                        <span className="cursor-pointer hover-underline">View 7,823 upvotes</span>
-                        &nbsp;·&nbsp;
-                        <span className="cursor-pointer hover-underline">View 19 shares</span>
-                    </div>
-
-                    <div className="pb-1 px-3 position-relative">
-                        <div className="d-flex">
-                            <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none" id="upvote-tooltip-1" data-tooltip="upvote-tooltip-1">
-                                &nbsp;Upvote&nbsp;
-                                <div className="position-absolute pointer-tooltip-write">
-                                    <FaPlay style={{color : '#404040'}}/>
-                                </div>
-                            </div>
-
-                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center px-3 py-2 fw-600 upvote-tooltip" data-tooltip="upvote-tooltip-1"> 
-                                <img data-tooltip="upvote-tooltip-1" src={upvoteSVG} alt=""/>&nbsp;20K
-                            </div>
-
-                            <div className="d-flex align-items-center button-divider">
-                                |
-                            </div>
-
-                            <div className="fw-600 text-color-description fs-13px position-absolute downvote-tooltips rounded p-1 text-center d-none" id="downvote-tooltip-1" data-tooltip="downvote-tooltip-1">
-                                &nbsp;Downvote&nbsp;
-                                <div className="position-absolute pointer-tooltip-write">
-                                    <FaPlay style={{color : '#404040'}}/>
-                                </div>
-                            </div>
-
-                            <div className="cursor-pointer downvote-button d-flex align-items-center px-3 py-2 downvote-tooltip" data-tooltip="downvote-tooltip-1">
-                                <img data-tooltip="downvote-tooltip-1" src={downvoteSVG} alt=""/>
-                            </div>
-
-                            &nbsp;
-
-                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative refresh-tooltip" data-tooltip="refresh-tooltip-1">
-                                <div className="fw-600 fs-13px position-absolute refresh-tooltips rounded p-1 text-center d-none" id="refresh-tooltip-1" data-tooltip="refresh-tooltip-1">
-                                    Share
-                                    <div className="position-absolute pointer-tooltip-write">
-                                        <FaPlay style={{color : '#404040'}}/>
-                                    </div>
-                                </div>
-
-                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip="refresh-tooltip-1">
-                                    <img  data-tooltip="refresh-tooltip-1" src={refreshSVG} alt=""/>&nbsp;93
-                                </div>
-                            </div>
-
-                            &nbsp;
-
-                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative comment-tooltip" data-tooltip="comment-tooltip-1">
-                                <div className="fw-600 fs-13px position-absolute comment-tooltips rounded p-1 text-center d-none" id="comment-tooltip-1" data-tooltip="comment-tooltip-1">
-                                    Comment
-                                    <div className="position-absolute pointer-tooltip-write">
-                                        <FaPlay style={{color : '#404040'}}/>
-                                    </div>
-                                </div>
-
-                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip="comment-tooltip-1">
-                                    <img data-tooltip="comment-tooltip-1" src={chatSVG} alt=""/>&nbsp;81
-                                </div>
-                            </div>
-
-                            <div className="position-absolute more-actions d-flex align-items-center px-3">
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative share-tooltip" data-tooltip="share-tooltip-1">
-                                    <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none" id="share-tooltip-1">
-                                        More sharing option
-                                        <div className="position-absolute pointer-tooltip-write">
-                                            <FaPlay style={{color : '#404040'}}/>
-                                        </div>
-                                    </div>
-
-                                    <img data-tooltip="share-tooltip-1" src={shareSVG} alt="" />
-                                </div>
-
-                                &nbsp;
-
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative more-tooltip" data-tooltip="more-tooltip-1">
-                                    <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none" id="more-tooltip-1">
-                                        More
-                                        <div className="position-absolute pointer-tooltip-write">
-                                            <FaPlay style={{color : '#404040'}}/>
-                                        </div>
-                                    </div>
-
-                                    <img data-tooltip="more-tooltip-1" src={moreSVG} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }
