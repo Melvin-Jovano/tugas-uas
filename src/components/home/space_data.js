@@ -58,5 +58,4 @@ export const spaceData = [
         img : exploreSVG,
         text : 'Discover Spaces'
     },
-    
 ];

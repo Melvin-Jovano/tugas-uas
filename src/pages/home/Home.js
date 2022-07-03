@@ -10,7 +10,7 @@ export default class Home extends Component {
         return (
             <Fragment>
                 <Navbar activeIndex={1}/>
-
+                
                 <div className="content-home pt-4">
                     <div className="d-flex justify-content-center">
                         <Space data={spaceData}/>
