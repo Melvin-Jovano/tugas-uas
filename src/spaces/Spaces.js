@@ -12,7 +12,7 @@ class spaces extends React.Component{
                 <Navbar activeIndex={4}/>
                 <div className="container px-4 pb-4" style={{paddingTop:30, width:1050}}>
                     <div className="d-flex">
-                        <div className="content">
+                        <div className="content" style={{width:720}}>
                             <div className="welcomeSpace">
                                 <div style={{padding:16}}>
                                     <div style={{paddingRight:350, marginBottom:16}}>
