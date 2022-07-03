@@ -27,7 +27,7 @@ export default class Content extends Component {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
 
             return (
-                <div className="w-100 my-2 contents rounded" key={index}>
+                <div className={`w-100 my-2 contents rounded cursor-pointer post`} key={index} data-preview={`preview-${index}`}>
                     <div className="pt-3 px-3">
                         <div className="position-relative writer mb-2">
 

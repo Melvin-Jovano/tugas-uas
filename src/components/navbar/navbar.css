@@ -1,5 +1,6 @@
 .navbar-component {
     background-color: #262626!important;
+    z-index: 1;
 }
 
 .text-main-color-navbar {
