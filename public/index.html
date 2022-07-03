@@ -33,8 +33,8 @@
           $('#modal-tooltip-navbar').toggleClass('d-none');
         });
 
-        $('.writer-tooltip').hover(() => {
-          
+        $('.writer-tooltip').hover((element) => {
+          $(`#${element.target.getAttribute('data-tooltip')}`).toggleClass('d-none');
         });
       });
       

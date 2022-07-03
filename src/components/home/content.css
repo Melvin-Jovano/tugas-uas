@@ -90,6 +90,10 @@
     font-size: 16px;
 }
 
+.fs-14px {
+    font-size: 14px;
+}
+
 .fs-15px {
     font-size: 15px;
 }
@@ -110,4 +114,33 @@
 
 .text-color-footer-post {
     color: #8E9092;
+}
+
+.upvote-button {
+    background-color: rgb(53, 53, 53);
+    border-radius: 20px 0 0 20px;
+
+}
+
+.downvote-button {
+    background-color: rgb(53, 53, 53);
+    border-radius: 0 20px 20px 0;
+}
+
+.button-divider {
+    background-color: rgb(53, 53, 53);
+    color: #717171a0;
+}
+
+.upvote-button:hover, .downvote-button:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+.interaction-button:hover {
+    background-color: rgb(53, 53, 53);
+    border-radius: 30px;
+}
+
+.more-action {
+    right: 0;
 }

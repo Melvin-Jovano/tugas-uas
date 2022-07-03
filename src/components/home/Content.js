@@ -4,6 +4,12 @@ import answerSVG from './answer.svg';
 import penSVG from './pen.svg';
 import timesSVG from './times.svg';
 import modSVG from './mod.svg';
+import upvoteSVG from './upvote.svg';
+import downvoteSVG from './downvote.svg';
+import chatSVG from './chat.svg';
+import refreshSVG from './refresh.svg';
+import shareSVG from './share.svg';
+import moreSVG from './more.svg';
 import {FaPlay} from 'react-icons/fa'
 import './content.css';
 
@@ -52,39 +58,40 @@ export default class Content extends Component {
                             </div>
                             <div className="text-color-title fs-13px">
                                 <table>
-                                    <tr>
-                                        <td rowSpan={2}>
-                                            <img width={36} height={36} src="https://qph.fs.quoracdn.net/main-thumb-ti-2738051-50-bkvamefuhxabguyfxkswiozunlnidfxf.jpeg" alt="" className="img-writer"/>
-                                        </td>
-                                        <td>
-                                            &nbsp;&nbsp;
-                                            <span className="fw-bold cursor-pointer hover-underline">Info Orb</span>
-                                            &nbsp;·&nbsp;
-                                            <span className="fw-bold cursor-pointer hover-underline text-color-link">Follow</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td className="text-color-description fw-550">
-                                            &nbsp;&nbsp;Posted by&nbsp;
-                                            <span className="cursor-pointer hover-underline">Josephine D. Leslie</span>
-                                            &nbsp;
-                                            
-                                            <div className="position-relative d-inline-block">
-                                                <div className="position-absolute a rounded p-1 text-center">
-                                                    Moderator
-                                                    <div className="position-absolute pointer-tooltip-write">
-                                                        <FaPlay style={{color : '#404040'}}/>
+                                    <tbody>
+                                        <tr>
+                                            <td rowSpan={2}>
+                                                <img width={36} height={36} src="https://qph.fs.quoracdn.net/main-thumb-ti-2738051-50-bkvamefuhxabguyfxkswiozunlnidfxf.jpeg" alt="" className="img-writer"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;
+                                                <span className="fw-bold cursor-pointer hover-underline">Info Orb</span>
+                                                &nbsp;·&nbsp;
+                                                <span className="fw-bold cursor-pointer hover-underline text-color-link">Follow</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="text-color-description fw-550">
+                                                &nbsp;&nbsp;Posted by&nbsp;
+                                                <span className="cursor-pointer hover-underline">Josephine D. Leslie</span>
+                                                &nbsp;
+                                                
+                                                <div className="position-relative d-inline-block">
+                                                    <div className="position-absolute a rounded p-1 text-center d-none" id="tooltip-1">
+                                                        Moderator
+                                                        <div className="position-absolute pointer-tooltip-write">
+                                                            <FaPlay style={{color : '#404040'}}/>
+                                                        </div>
                                                     </div>
+                                                    <img className="writer-tooltip" data-tooltip="tooltip-1" src={modSVG} alt=""/>
                                                 </div>
-                                                <img className="cursor-pointer writer-tooltip" src={modSVG} alt=""/>
-                                            </div>
-                                            
-                                            &nbsp;·&nbsp;
-                                            <span className="cursor-pointer hover-underline">Jun 7</span>
-                                        </td>
-                                    </tr>
+                                                
+                                                &nbsp;·&nbsp;
+                                                <span className="cursor-pointer hover-underline">Jun 7</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
-                                
                                 
                             </div>
                         </div>
@@ -119,7 +126,41 @@ export default class Content extends Component {
                         &nbsp;·&nbsp;
                         <span className="cursor-pointer hover-underline">View 7,823 upvotes</span>
                         &nbsp;·&nbsp;
-                        View 19 shares
+                        <span className="cursor-pointer hover-underline">View 19 shares</span>
+                    </div>
+
+                    <div className="pb-3 px-3 position-relative">
+                        <div className="d-flex">
+                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center p-3 px-2 py-2 fw-600"> 
+                                <img src={upvoteSVG} alt=""/>&nbsp;20K
+                            </div>
+                            <div className="d-flex align-items-center button-divider">
+                                |
+                            </div>
+                            <div className="cursor-pointer downvote-button d-flex align-items-center p-3 px-2 py-2">
+                                <img src={downvoteSVG} alt=""/>
+                            </div>
+
+                            <div className="cursor-pointer d-flex align-items-center p-3 px-2 py-2 text-color-description fw-600 interaction-button mx-1 fs-14px">
+                                <img src={refreshSVG} alt=""/>&nbsp;93
+                            </div>
+
+                            <div className="cursor-pointer d-flex align-items-center p-3 px-2 py-2 text-color-description fw-600 interaction-button mx-1 fs-14px">
+                                <img src={chatSVG} alt=""/>&nbsp;81
+                            </div>
+
+                            <div className="position-absolute more-action d-flex align-items-center px-3">
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2">
+                                    <img src={shareSVG} alt="" />
+                                </div>
+
+                                &nbsp;
+
+                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2">
+                                    <img src={moreSVG} alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
