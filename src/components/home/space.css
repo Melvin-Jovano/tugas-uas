@@ -15,5 +15,52 @@
 }
 
 .create-space-button {
+    background-color: #1A1A1A;
+}
+
+.create-space-button:hover {
     background-color: #1D1D1D;
+    cursor: pointer;
+}
+
+.space-list:hover {
+    background-color: #1D1D1D;
+    cursor: pointer;
+}
+
+.space-container {
+    width : 14%;
+    font-size: 13px;
+    font-weight: 450;
+    left: 15%;
+    color: #8e9092;
+    overflow: auto;
+    max-height: 90vh;
+}
+
+.space-container::-webkit-scrollbar {
+    width : 10px;
+}
+
+.space-container:hover::-webkit-scrollbar-thumb {
+    box-shadow: rgb(255 255 255 / 10%) 0px 0px 10px 10px inset;
+}
+
+.space-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.space-link {
+    font-size: 13.5px;
+}
+
+.space-container::-webkit-scrollbar-thumb {
+    border-radius: 9999em;
+    box-shadow: transparent 0px 0px 10px 10px inset;
+    border: 2px solid transparent;
+}
+
+.space-container::-webkit-scrollbar-track {
+    background-color: transparent;
 }

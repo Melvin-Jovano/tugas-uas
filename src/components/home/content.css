@@ -1,0 +1,192 @@
+.text-color-space {
+    color: #B1B3B6;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.content {
+    width: 40%;
+}
+
+.post-content {
+    background-color: #262626;
+    border: 1px solid #262626;
+    color: #B1B3B6;
+}
+
+.post-content:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.post-button:hover {
+    background-color: #FFFFFF0A;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.input-post {
+    background-color: #202020;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    font-size: 15px;
+    color: #8E9092;
+    font-weight: 450;
+    cursor: pointer;
+}
+
+.contents {
+    background-color: #262626;
+}
+
+.hide-post {
+    cursor: pointer;
+    right: 0;
+}
+
+.hide-post:hover {
+    background-color:rgba(255,255,255,0.04)!important;
+    border-radius: 100%;
+}
+
+.text-color-title {
+    color: #D5D6D6;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.img-writer {
+    border-radius: 10px;
+}
+
+.text-color-link {
+    color: #4894FD;
+}
+
+.text-color-description {
+    color: #B1B3B6;
+}
+
+.fw-550 {
+    font-weight: 550;
+}
+
+.text-color-title-post {
+    color: #CDCDCD;
+}
+
+.fs-16px {
+    font-size: 16px;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-15px {
+    font-size: 15px;
+}
+
+.writer-tooltips {
+    top: -36px;
+    left: -190%;
+    right: -160%;
+    background-color: #404040;
+}
+
+.pointer-tooltip-write {
+    bottom: -5px;
+    left: 52%;
+    right: 50%;
+    transform: rotate(90deg);
+}
+
+.text-color-footer-post {
+    color: #8E9092;
+}
+
+.upvote-button {
+    background-color: rgb(53, 53, 53);
+    border-radius: 50px 0 0 50px;
+
+}
+
+.downvote-button {
+    background-color: rgb(53, 53, 53);
+    border-radius: 0 50px 50px 0;
+}
+
+.button-divider {
+    background-color: rgb(53, 53, 53);
+    color: #717171a0;
+}
+
+.upvote-button:hover, .downvote-button:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+.interaction-button:hover {
+    background-color: rgb(53, 53, 53);
+    border-radius: 30px;
+}
+
+.more-actions {
+    right: 0;
+}
+
+.more-tooltips {
+    top: -38px;
+    left: -20%;
+    right: -12%;
+    background-color: #404040;
+}
+
+.share-tooltips {
+    top: -38px;
+    left: -140%;
+    right: -127%;
+    background-color: #404040;
+}
+
+.comment-tooltips {
+    top: -38px;
+    left: -5%;
+    right: -6%;
+    background-color: #404040;
+}
+
+.refresh-tooltips {
+    top: -38px;
+    left: 20%;
+    right: 17%;
+    background-color: #404040;
+}
+
+.downvote-tooltips {
+    top: -38px;
+    left: 16.5%;
+    background-color: #404040;
+}
+
+.upvote-tooltips {
+    top: -38px;
+    left: 2.5%;
+    background-color: #404040;
+}
+
+.hide-tooltips {
+    top: -38px;
+    right: -4px;
+    background-color: #404040;
+}
