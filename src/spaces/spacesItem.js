@@ -65,9 +65,9 @@ class SpacesItem extends React.Component{
                                 </svg>
                                 <div className="d-flex align-items-center ms-1" style={{fontSize:13, fontWeight:"500"}}>
                                     <div className="me-1">Follow</div>
-                                    <div>·</div>
+                                    <div className={this.data.follow === null ? "d-none" : ""}>·</div>
                                 </div>
-                                <div className="d-flex align-items-center ms-1" style={{fontSize:13}}>
+                                <div className={this.data.follow === null? "d-none":"d-flex align-items-center ms-1"} style={{fontSize:13}}>
                                     {this.data.follow}
                                 </div>
                             </div>

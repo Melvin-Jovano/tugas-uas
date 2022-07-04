@@ -6,7 +6,10 @@ class spacesTitle extends React.Component{
         super();
         this.data=[
             "Spaces you might like",
-            "Technology"
+            "Technology",
+            "Software and Applications",
+            "Design",
+            "English (language)"
         ]
     }
     render(){
