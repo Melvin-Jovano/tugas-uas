@@ -53,7 +53,7 @@ export default class Navbar extends Component {
 
                 <div id="modal-tooltip-remover-navbar" className="d-none modal-tooltip-remover-navbar position-absolute vw-100 vh-100"></div>
 
-                <div className="position-relative mb-2" style={{zIndex:"1"}}>
+                <div className="position-relative mb-2">
                     <nav className="navbar-component position-fixed w-100">
                         <div className="d-flex justify-content-center">
                             <div className="mx-3">

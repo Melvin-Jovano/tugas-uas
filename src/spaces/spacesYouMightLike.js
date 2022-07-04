@@ -125,4 +125,126 @@ export const spacesYouMightLike =[
         contributors : 38,
         follow : "69.7K"
     },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1603656-320x64-oywiymbtafaedgwrymftuzuclqmqbdwy.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1603656-100-hydxavmhnlniiejiufhkxkgabddgoxob.jpeg",
+        title : "Personal Growth",
+        description : "Personal Development | Success & Self-Improvement | Productivity & Motivation",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-310288-200-hpffbgncmksmkzekqmrlzbpimqnwzpwo.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-723284-200-bpqzvhnhaexrgyyvmuemiqibsbzfuhhy.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-1258273-200-dYgDE4RHRJHpp9wlaHV4xeOrTtdorOyj.jpeg"
+        ],
+        name : "James Martin",
+        contributors : 38,
+        follow : "278.1K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1702043-320x64-uaroyzqhqirllfqjymkrngadbtnmxpks.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1702043-100-wswlkhpzbhzftpbywhhfgwwofzokqven.jpeg",
+        title : "IELTS Writing & Speaking",
+        description : "IELTS experts & (ex)examiners can answer your questions.",
+        profile : [
+            null
+        ],
+        name : null,
+        contributors : 0,
+        follow : "10.4K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-454-320x64-vwgkhcktzzzgplimbeyhdyiwraubvrce.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-454-100-rmmhnazdndtqcqrqmyehsrtovicqhgna.jpeg",
+        title : "UI/UX & Product",
+        description : "A space to discuss user design and everything product.",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-54276646-200-cjrwrkheeayecefehkodrerinrcoehns.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-127521326-200-frtbzvpdzwzpatecdpjdybatcflpmysw.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-666570888-200-kezoioxuxcntdkljefqzvwykdnwezpew.jpeg"
+        ],
+        name : "Kias Hanifa",
+        contributors : 4,
+        follow : "26.7K"
+    },
+    {
+        cover : "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1579024-100-rzwkaphflfwkvkvvyfsxxqworztlpstz.jpeg",
+        title : "Smart Phones News",
+        description : "The latest smart phones specifications, updates and comparisons.",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-367697646-200-fzqmiuqsdjbfmaipruclxfgqgtmloiiy.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-615153336-200-zihcdahvpehkflmxrqhvhanjqusadhtg.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-619954092-200-sgysfvdzogwknaogehbvbefrqjqsgmdx.jpeg"
+        ],
+        name : "Ganesh G",
+        contributors : 30,
+        follow : "472.8K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1606343-320x64-ooyazzmdleoywacrpunwoeicxkhfnrtb.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1606343-100-kfocmmuimgivsnjjetsjwklavwkyogqs.jpeg",
+        title : "The Writer's Review",
+        description : "Post your creative writing here to be seen and to get advice.",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-40467697-200-hqhorjaqfjlhukzswuiqibhidcpyievr.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-45438494-200-dtwecyzfktgfoudfvzbjlzkwtkcjrekz.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-165944635-200-rcdgbzgypzqsgasvmrujeygeopsrjgow.jpeg"
+        ],
+        name : "Richard Ashley",
+        contributors : 25,
+        follow : "144.2K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1583815-320x64-xigwhvwtylgqetxwbacrqxjxjnbsnzil.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1583815-100-etnvvqddpwnzgzqpsdxwykgijtdkprpw.jpeg",
+        title : "Upwork Secrets and Advice",
+        description : "The best information about Upwork, completing online jobs, and working remotely",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-108363948-200-zfktwgvunpeeeqlsxsvtaojsxfeqnsyf.jpeg",
+            "https://qsf.fs.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+            "https://qph.fs.quoracdn.net/main-thumb-196045969-200-jidhmqsyipoqkbtbifpfiphgxsuparrk.jpeg"
+        ],
+        name : "Igor K",
+        contributors : 10,
+        follow : "16.2K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1584448-320x64-fjcfiaopiqqgficachzchujbqmolbsaq.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1584448-100-ukebbxutzrfmtyxnwybcgdhnufsljqhg.jpeg",
+        title : "Voyage - Travel - Places",
+        description : "Best Travel destinations, best places to live, voyage stories",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-1467843453-200-wvhemryaovmytixidzlmalxaqmyokxrj.jpeg"
+        ],
+        name : "Diego Pastuch",
+        contributors : 0,
+        follow : "6.9K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-2466345-320x64-ysbefxkydkhhobbzgbilqdrmyrsikvzp.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-2466345-100-rvfgnrrggncdmaukeatonxaditakpepr.jpeg",
+        title : "Graphics Designers",
+        description : "Lets Learn Graphics Designing using photoshop and other designing softwares",
+        profile : [
+            "https://qph.fs.quoracdn.net/main-thumb-24072651-200-zpoazmivwamjuohdhifrdntjgqnifoqn.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-50835380-200-htjmunopqwvpyykvhrkkecpowatqmpeb.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-185968803-200-zrpcadcyysoaybvvzlkredpmcysdxvfb.jpeg"
+        ],
+        name : "Vernon Southward",
+        contributors : 12,
+        follow : "3.1K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1720245-320x64-gknroisdctkqgeywtakhanbrxkppmhaa.jpeg",
+        icon : "https://qph.fs.quoracdn.net/main-thumb-ti-1720245-100-kqlffakorwbroqenqwwnhzjavzptdzhn.jpeg",
+        title : "Human Psychology Facts",
+        description : "Human Psychology is the science of mind and human behavior",
+        profile : [
+            "https://qsf.fs.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+            "https://qph.fs.quoracdn.net/main-thumb-7222546-200-ecnftwvkhspfnnopgejkzdjnhspkwtnn.jpeg",
+            "https://qph.fs.quoracdn.net/main-thumb-8492763-200-0yJu8skrhHCL81kVJhVhZFoOuAfIIWob.jpeg"
+        ],
+        name : "Jane Adams",
+        contributors : 38,
+        follow : "834.7K"
+    },
 ]

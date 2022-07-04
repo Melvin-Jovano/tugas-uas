@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import Navbar from "../components/navbar/Navbar";
 import {CgAdd} from "react-icons/cg";
 import {IoCompassOutline} from "react-icons/io5";
-import SpacesBox from "./spacesBox";
+import {FiMail} from "react-icons/fi";
+import SpacesTitle from "./spacesTitle";
 import "./Spaces.css";
 
 class spaces extends React.Component{
@@ -13,7 +14,7 @@ class spaces extends React.Component{
                 <div className="container px-4 pb-4" style={{paddingTop:30, width:1050}}>
                     <div className="d-flex">
                         <div className="content" style={{width:720}}>
-                            <div className="welcomeSpace">
+                            <div className="welcomeSpace rounded-3">
                                 <div style={{padding:16}}>
                                     <div style={{paddingRight:350, marginBottom:16}}>
                                         <span className="mb-1 welcomeTitle">Welcome to Spaces!</span>
@@ -39,7 +40,20 @@ class spaces extends React.Component{
                             <div className="mt-4">
                                 <span className="fw-bold" style={{color:"#cdcdcd", fontSize:"21px"}}>Discover Spaces</span>
                             </div>
-                            <SpacesBox/>
+                            <SpacesTitle/>
+                        </div>
+                        <div style={{marginLeft:30}}>
+                            <div className="rounded-3" style={{fontSize:15, backgroundColor:"#262626", width:260, opacity:"0.6"}}>
+                                <div className="px-3 py-2 invitesTitle">
+                                    Pending Invites
+                                </div>
+                                <div className="d-flex px-2 py-1 justify-content-center">
+                                    <div className="text-center py-4" style={{color:"#8e9092"}}>
+                                        <FiMail className="mb-2" style={{fontSize:20}}/>
+                                        <div style={{fontSize:13}}>No invites</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

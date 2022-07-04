@@ -18,7 +18,6 @@ class SpacesItem extends React.Component{
         this.state = {
             isHover : false,
         }
-        this.item = React.createRef()
         this.handleMouseOver = this.handleMouseOver.bind(this)
         this.handleMouseOut = this.handleMouseOut.bind(this)
     }
@@ -49,12 +48,12 @@ class SpacesItem extends React.Component{
                     <div className="d-flex">
                         {this.data.profiles.map((profile)=>{
                             return(
-                                <img src={profile} alt="" style={{width:16, height:16, cursor:"pointer"}} className="rounded-circle"/>
+                                <img src={profile} alt="" style={{width:16, height:16, cursor:"pointer"}} className={profile === null? "d-none" : "rounded-circle"}/>
                             )
                         })}
                     </div>
-                    <div className="ms-1 fw-normal text-start" style={{color:"#8e9092", fontSize:13}}>
-                        <span className="popItemName" style={{cursor:"pointer"}}>{this.data.name}</span> and {this.data.contributors} more are contributors
+                    <div className={this.data.contributors === 0? (this.data.name === null? "d-none" : "ms-1 fw-normal text-start" ) : "ms-1 fw-normal text-start"} style={{color:"#8e9092", fontSize:13}}>
+                        <span className="popItemName" style={{cursor:"pointer"}}>{this.data.name}</span> {this.data.contributors === 0? "is" : "and"} {this.data.contributors === 0 ? "" : (this.data.contributors)} {this.data.contributors > 0 ? "more are contributors" : "a contributor"}
                     </div>
                 </div>
                 <div className="mt-2" style={{borderTop:"solid 1px", borderColor:"#393839", padding:"0 16px", margin:"0 -16px"}}>
@@ -90,7 +89,7 @@ class SpacesItem extends React.Component{
         return(
             <Fragment>
                 <div>
-                    <li className={this.data.urut > 7 ? "list-unstyled spacesItem hide" : "list-unstyled spacesItem"} style={{width:171.5, height:236, cursor:"pointer"}} ref={this.item} >
+                    <li className={this.data.urut > (this.props.batas) ? "list-unstyled spacesItem hide" : "list-unstyled spacesItem"} style={{width:171.5, height:236, cursor:"pointer"}}>
                         <div className="d-flex flex-column">
                             <img className="spacesItemCover" src={this.data.cover} alt="" height={50}/>
                             <div className="position-relative" style={{height:20}}>
