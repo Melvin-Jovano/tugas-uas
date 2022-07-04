@@ -13,15 +13,26 @@ import shareSVG from './share.svg';
 import moreSVG from './more.svg';
 import {FaPlay} from 'react-icons/fa'
 import './content.css';
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export default class Content extends Component {
+    post;
     constructor(props) {
         super();
+        this.post = props.data;
         this.state = {
             data : props.data
         };
+
+        this.fetchMoreData = this.fetchMoreData.bind(this);
     }
     
+    fetchMoreData() {
+        this.setState({
+            data : this.state.data.concat(this.post)
+        });
+    }
+
     render() {
         const data = this.state.data.map((data, index) => {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
@@ -211,7 +222,14 @@ export default class Content extends Component {
 
                 </div>
 
-                {data}
+                <InfiniteScroll
+                dataLength={this.state.data.length}
+                next={this.fetchMoreData}
+                hasMore={true}
+                loader={<h4>Loading...</h4>}
+                >
+                    {data}
+                </InfiniteScroll>
 
             </div>
         );

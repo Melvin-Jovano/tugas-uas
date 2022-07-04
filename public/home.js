@@ -1,3 +1,4 @@
+
 $(document).ready(() => {
     $('#modal-tooltip-remover-navbar').click(() => {
         $('#modal-tooltip-remover-navbar').toggleClass('d-none');
