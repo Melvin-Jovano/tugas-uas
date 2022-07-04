@@ -145,4 +145,66 @@ export const spacesTechnology =[
         contributors : 30,
         follow : "472.8K"
     },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1584741-320x64-bwberisuoszifnfyqpzjhsfnavzeudvx.jpeg",
+        icon : "https://qph.cf2.quoracdn.net/main-thumb-ti-1584741-100-ugzzjedhsrzzdlekhvjujbvecofuxyeh.jpeg",
+        title : "iPhone iPad MacBook iOS",
+        description : "All about iPhones, iPad, iOS Apps, MacBooks, MacOs, Apple App store, iPhone Apps",
+        profile : [
+            null
+        ],
+        name : null,
+        contributors : 0,
+        follow : "110.7K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1733332-320x64-ajsswnqtzqkpmgjtpjgynzoofccwyram.jpeg",
+        icon : "https://qph.cf2.quoracdn.net/main-thumb-ti-1733332-100-dbtqavkoelygzfhnslgttrdjelznfbnf.jpeg",
+        title : "Technology Evangelists",
+        description : "A Space for discovering and sharing information about advances in technology.",
+        profile : [
+            null
+        ],
+        name : null,
+        contributors : 0,
+        follow : "7.1K"
+    },
+    {
+        cover : "https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
+        icon : "https://qph.cf2.quoracdn.net/main-thumb-ti-696-100-ssjgbkyvidryivqdqlrvfmmbnmxwksvk.jpeg",
+        title : "Advances in AI",
+        description : "A space for advances in research and application of Artificial Intelligence",
+        profile : [
+            null
+        ],
+        name : null,
+        contributors : 0,
+        follow : "146.9K"
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-2147018-320x64-pxjkboovgxozptwhkdhkiwleqhgshiig.jpeg",
+        icon : "https://qph.cf2.quoracdn.net/main-thumb-ti-2147018-100-fwsuojascqqbohhycpddtwawqsrhgvgr.jpeg",
+        title : "Building Tomorrow",
+        description : "What will the future bring?",
+        profile : [
+            "https://qph.cf2.quoracdn.net/main-thumb-3720548-200-3PFS59VwNgJQH4ymFblZ76CyMlAvyVRP.jpeg",
+            "https://qph.cf2.quoracdn.net/main-thumb-11536515-200-rmffdyklnwgmyttrlcekbioipxfuzoij.jpeg",
+            "https://qph.cf2.quoracdn.net/main-thumb-151180895-200-zggmemlpldnjxsqjbinlozjiptralkcu.jpeg"
+        ],
+        name : "David Ihnen",
+        contributors : 6,
+        follow : 170
+    },
+    {
+        cover : "https://qph.fs.quoracdn.net/main-custom-tc-1898483-320x64-kkwxnidzqtgfgeveqxavjsqacejpoeov.jpeg",
+        icon : "https://qph.cf2.quoracdn.net/main-thumb-ti-1898483-100-verurkfnojhjcaxtumdxwdsvxgyhxlit.jpeg",
+        title : "eCommerce All Product",
+        description : "eCommerce All Product",
+        profile : [
+            "https://qph.cf2.quoracdn.net/main-thumb-525628771-200-aruxavihzctqklpzqmlcmoxsxxeknluo.jpeg"
+        ],
+        name : "Shahadat Hossain",
+        contributors : 0,
+        follow : 51
+    },
 ]

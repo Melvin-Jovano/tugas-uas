@@ -89,7 +89,7 @@ class SpacesItem extends React.Component{
         return(
             <Fragment>
                 <div>
-                    <li className={this.data.urut > (this.props.batas) ? "list-unstyled spacesItem hide" : "list-unstyled spacesItem"} style={{width:171.5, height:236, cursor:"pointer"}}>
+                    <li className={this.data.urut > (this.props.batas) ? "d-none" : "mb-2 me-2 list-unstyled spacesItem"} style={{width:171.5, height:236, cursor:"pointer"}}>
                         <div className="d-flex flex-column">
                             <img className="spacesItemCover" src={this.data.cover} alt="" height={50}/>
                             <div className="position-relative" style={{height:20}}>
