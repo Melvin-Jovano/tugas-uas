@@ -159,7 +159,7 @@
 .share-tooltips {
     top: -38px;
     left: -140%;
-    right: -127%;
+    right: -135%;
     background-color: #404040;
 }
 
@@ -173,7 +173,7 @@
 .refresh-tooltips {
     top: -38px;
     left: 20%;
-    right: 17%;
+    right: 10%;
     background-color: #404040;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .hide-tooltips {
-    top: -18px;
+    top: -38px;
     right: -5px;
     background-color: #404040;
 }

@@ -16,7 +16,6 @@ import './content.css';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export default class Content extends Component {
-    post;
     constructor(props) {
         super();
         this.post = props.data;
@@ -28,9 +27,11 @@ export default class Content extends Component {
     }
     
     fetchMoreData() {
-        this.setState({
-            data : this.state.data.concat(this.post),
-        });
+        setTimeout(() => {
+            this.setState({
+                data : this.state.data.concat(this.post),
+            });
+        }, 3000);
     }
 
     onPostMouseEnter(element) {
@@ -58,11 +59,11 @@ export default class Content extends Component {
     }
 
     onHideTooltipMouseEnter(element) {
-        element.currentTarget.previousElementSibling.classList.remove('d-none')
+        element.currentTarget.previousElementSibling.classList.remove('d-none');
     }
 
     onHideTooltipMouseLeave(element) {
-        element.currentTarget.previousElementSibling.classList.add('d-none')
+        element.currentTarget.previousElementSibling.classList.add('d-none');
     }
 
     onPostClick(element) {
@@ -77,23 +78,71 @@ export default class Content extends Component {
         }
     }
 
+    onShareTooltipMouseEnter(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.remove('d-none');
+    }
+
+    onShareTooltipMouseLeave(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.add('d-none');
+    }
+
+    onCommentTooltipMouseEnter(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.remove('d-none');
+    }
+
+    onCommentTooltipMouseLeave(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.add('d-none');
+    }
+
+    onMoreSharingTooltipMouseEnter(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.remove('d-none');
+    }
+
+    onMoreSharingTooltipMouseLeave(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.add('d-none');
+    }
+
+    onMoreTooltipMouseEnter(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.remove('d-none');
+    }
+
+    onMoreTooltipMouseLeave(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.add('d-none');
+    }
+
+    onUpvoteTooltipMouseEnter(element) {
+        element.currentTarget.previousElementSibling.classList.remove('d-none');
+    }
+
+    onUpvoteTooltipMouseLeave(element) {
+        element.currentTarget.previousElementSibling.classList.add('d-none');
+    }
+
+    onDownvoteTooltipMouseEnter(element) {
+        element.currentTarget.previousElementSibling.classList.remove('d-none');
+    }
+
+    onDownvoteTooltipMouseLeave(element) {
+        element.currentTarget.previousElementSibling.classList.add('d-none');
+    }
+
     render() {
         const data = this.state.data.map((data, index) => {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
 
             return (
-                <div className={`w-100 my-2 contents rounded cursor-pointer overflow-visible`} onClick={this.onPostClick} onMouseEnter={this.onPostMouseEnter} onMouseLeave={this.onPostMouseLeave} key={index} data-preview={`${(data.noPreview) ? 0 : 1}`}>
+                <div className={`w-100 my-2 contents rounded cursor-pointer post`} onClick={this.onPostClick} onMouseEnter={this.onPostMouseEnter} onMouseLeave={this.onPostMouseLeave} key={index} data-preview={`${(data.noPreview) ? 0 : 1}`}>
                     <div className="pt-3 px-3">
                         <div className="position-relative mb-2">
 
-                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none">
+                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" style={{zIndex : 10}}>
                                 &nbsp;Hide&nbsp;
                                 <div className="position-absolute pointer-tooltip-write">
                                     <FaPlay style={{color : '#404040'}}/>
                                 </div>
                             </div>
 
-                            <div className="position-absolute hide-post p-1 hide-tooltip" onMouseEnter={this.onHideTooltipMouseEnter} onMouseLeave={this.onHideTooltipMouseLeave}>
+                            <div style={{zIndex : 1}} className="position-absolute hide-post p-1 hide-tooltip" onMouseEnter={this.onHideTooltipMouseEnter} onMouseLeave={this.onHideTooltipMouseLeave}>
                                 <img src={timesSVG} alt=""/>
                             </div>
 
@@ -152,85 +201,86 @@ export default class Content extends Component {
 
                     <div className="pb-1 px-3 position-relative">
                         <div className="d-flex">
-                            <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none" id={`upvote-tooltip-${index}`} data-tooltip={`upvote-tooltip-${index}`}>
+                            <div className="fw-600 text-color-description fs-13px position-absolute upvote-tooltips rounded p-1 text-center d-none">
                                 &nbsp;Upvote&nbsp;
                                 <div className="position-absolute pointer-tooltip-write">
                                     <FaPlay style={{color : '#404040'}}/>
                                 </div>
                             </div>
 
-                            <div className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center px-3 py-2 fw-600 upvote-tooltip" data-tooltip={`upvote-tooltip-${index}`}> 
-                                <img data-tooltip={`upvote-tooltip-${index}`} src={upvoteSVG} alt=""/>&nbsp;{data.upvote}
+                            <div onMouseEnter={this.onUpvoteTooltipMouseEnter} onMouseLeave={this.onUpvoteTooltipMouseLeave} className="cursor-pointer upvote-button text-color-description fs-14px d-flex align-items-center px-3 py-2 fw-600 upvote-tooltip"> 
+                                <img src={upvoteSVG} alt=""/>&nbsp;{data.upvote}
                             </div>
 
                             <div className="d-flex align-items-center button-divider">
                                 |
                             </div>
 
-                            <div className="fw-600 text-color-description fs-13px position-absolute downvote-tooltips rounded p-1 text-center d-none" id={`downvote-tooltip-${index}`} data-tooltip={`downvote-tooltip-${index}`}>
+                            <div className="fw-600 text-color-description fs-13px position-absolute downvote-tooltips rounded p-1 text-center d-none">
                                 &nbsp;Downvote&nbsp;
                                 <div className="position-absolute pointer-tooltip-write">
                                     <FaPlay style={{color : '#404040'}}/>
                                 </div>
                             </div>
 
-                            <div className="cursor-pointer downvote-button d-flex align-items-center px-3 py-2 downvote-tooltip" data-tooltip={`downvote-tooltip-${index}`}>
-                                <img data-tooltip={`downvote-tooltip-${index}`} src={downvoteSVG} alt=""/>
+                            <div onMouseEnter={this.onUpvoteTooltipMouseEnter} onMouseLeave={this.onUpvoteTooltipMouseLeave} className="cursor-pointer downvote-button d-flex align-items-center px-3 py-2 downvote-tooltip">
+                                <img src={downvoteSVG} alt=""/>
                             </div>
 
                             &nbsp;
 
-                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative refresh-tooltip" data-tooltip={`refresh-tooltip-${index}`}>
-                                <div className="fw-600 fs-13px position-absolute refresh-tooltips rounded p-1 text-center d-none" id={`refresh-tooltip-${index}`} data-tooltip={`refresh-tooltip-${index}`}>
+                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative refresh-tooltip" onMouseEnter={this.onShareTooltipMouseEnter} onMouseLeave={this.onShareTooltipMouseLeave}>
+                                <div className="fw-600 fs-13px position-absolute refresh-tooltips rounded p-1 text-center d-none">
                                     Share
                                     <div className="position-absolute pointer-tooltip-write">
                                         <FaPlay style={{color : '#404040'}}/>
                                     </div>
                                 </div>
 
-                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip={`refresh-tooltip-${index}`}>
-                                    <img  data-tooltip={`refresh-tooltip-${index}`} src={refreshSVG} alt=""/>&nbsp;{data.shared}
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px">
+                                    <img src={refreshSVG} alt=""/>&nbsp;{data.shared}
                                 </div>
                             </div>
 
                             &nbsp;
 
-                            <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative comment-tooltip" data-tooltip={`comment-tooltip-${index}`}>
-                                <div className="fw-600 fs-13px position-absolute comment-tooltips rounded p-1 text-center d-none" id={`comment-tooltip-${index}`} data-tooltip={`comment-tooltip-${index}`}>
+                            <div onMouseEnter={this.onCommentTooltipMouseEnter} onMouseLeave={this.onCommentTooltipMouseLeave} className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative comment-tooltip">
+                                <div className="fw-600 fs-13px position-absolute comment-tooltips rounded p-1 text-center d-none">
                                     Comment
                                     <div className="position-absolute pointer-tooltip-write">
                                         <FaPlay style={{color : '#404040'}}/>
                                     </div>
                                 </div>
 
-                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px" data-tooltip={`comment-tooltip-${index}`}>
-                                    <img data-tooltip={`comment-tooltip-${index}`} src={chatSVG} alt=""/>&nbsp;{data.comments}
+                                <div className="cursor-pointer d-flex align-items-center text-color-description fw-600 interaction-button mx-1 fs-14px">
+                                    <img src={chatSVG} alt=""/>&nbsp;{data.comments}
                                 </div>
                             </div>
 
                             <div className="position-absolute more-actions d-flex align-items-center px-3">
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative share-tooltip" data-tooltip={`share-tooltip-${index}`}>
-                                    <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none" id={`share-tooltip-${index}`}>
+
+                                <div onMouseEnter={this.onMoreSharingTooltipMouseEnter} onMouseLeave={this.onMoreSharingTooltipMouseLeave} className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative share-tooltip">
+                                    <div className="fw-600 fs-13px position-absolute share-tooltips rounded p-1 text-center d-none">
                                         More sharing option
                                         <div className="position-absolute pointer-tooltip-write">
                                             <FaPlay style={{color : '#404040'}}/>
                                         </div>
                                     </div>
 
-                                    <img data-tooltip={`share-tooltip-${index}`} src={shareSVG} alt="" />
+                                    <img src={shareSVG} alt="" />
                                 </div>
 
                                 &nbsp;
 
-                                <div className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative more-tooltip" data-tooltip={`more-tooltip-${index}`}>
-                                    <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none" id={`more-tooltip-${index}`}>
+                                <div onMouseEnter={this.onMoreTooltipMouseEnter} onMouseLeave={this.onMoreTooltipMouseLeave} className="cursor-pointer d-flex align-items-center text-color-description interaction-button p-2 position-relative more-tooltip">
+                                    <div className="fw-600 fs-13px position-absolute more-tooltips rounded p-1 text-center d-none">
                                         More
                                         <div className="position-absolute pointer-tooltip-write">
                                             <FaPlay style={{color : '#404040'}}/>
                                         </div>
                                     </div>
 
-                                    <img data-tooltip={`more-tooltip-${index}`} src={moreSVG} alt="" />
+                                    <img src={moreSVG} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -269,7 +319,16 @@ export default class Content extends Component {
                 dataLength={this.state.data.length}
                 next={this.fetchMoreData}
                 hasMore={true}
-                loader={<h4>Loading...</h4>}
+                loader={
+                    <center class="my-3">
+                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                        &nbsp;
+                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                        &nbsp;
+                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                    </center>
+                }
+                style={{overflow : 'visible'}}
                 >
                     {data}
                 </InfiniteScroll>
