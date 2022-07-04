@@ -59,11 +59,11 @@ export const contentData = [
         writer : 'Ray Macintosh',
         createdAt : '6h',
         upvote : '11',
-        shared : '1',
-        comments : '3',
+        shared : '11',
+        comments : '13',
         views : '298',
         upvoted : '11',
-        shares : '1',
+        shares : '11',
         desc : 
         `
             <div>
@@ -263,11 +263,11 @@ export const contentData = [
         createdAt : 'Apr 30',
         thumbnail : 'https://qph.fs.quoracdn.net/main-qimg-699ae9f37ad36c6787a6612169e58b1f-lq',
         upvote : '725',
-        shared : '2',
+        shared : '12',
         comments : '26',
         views : '143.1K',
         upvoted : '725',
-        shares : '2',
+        shares : '12',
         noPreview : true,
         desc : 
         `
