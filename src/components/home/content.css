@@ -195,10 +195,9 @@
 }
 
 .hide-tooltips {
-    top: -38px;
-    right: -4px;
+    top: -18px;
+    right: -5px;
     background-color: #404040;
-    z-index: 2;
 }
 
 .post:hover {

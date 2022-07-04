@@ -21,7 +21,7 @@ export default class Content extends Component {
         super();
         this.post = props.data;
         this.state = {
-            data : props.data
+            data : props.data,
         };
 
         this.fetchMoreData = this.fetchMoreData.bind(this);
@@ -29,8 +29,52 @@ export default class Content extends Component {
     
     fetchMoreData() {
         this.setState({
-            data : this.state.data.concat(this.post)
+            data : this.state.data.concat(this.post),
         });
+    }
+
+    onPostMouseEnter(element) {
+        try {
+            element.currentTarget.getElementsByTagName('div')[13].classList.add('text-underline');
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    onPostMouseLeave(element) {
+        try {
+            element.currentTarget.getElementsByTagName('div')[13].classList.remove('text-underline');
+        } catch (error) {
+            return
+        }
+    }
+
+    onWriterTooltipMouseEnter(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.remove('d-none');
+    }
+
+    onWriterTooltipMouseLeave(element) {
+        element.currentTarget.getElementsByTagName('div')[0].classList.add('d-none');
+    }
+
+    onHideTooltipMouseEnter(element) {
+        element.currentTarget.previousElementSibling.classList.remove('d-none')
+    }
+
+    onHideTooltipMouseLeave(element) {
+        element.currentTarget.previousElementSibling.classList.add('d-none')
+    }
+
+    onPostClick(element) {
+        try {
+            if(element.currentTarget.dataset.preview === '1') {
+                element.currentTarget.getElementsByTagName('div')[11].classList.add('d-none');
+                element.currentTarget.getElementsByTagName('div')[13].classList.add('d-none');
+                element.currentTarget.getElementsByTagName('div')[15].classList.remove('d-none');
+            }
+        } catch (error) {
+            return
+        }
     }
 
     render() {
@@ -38,19 +82,19 @@ export default class Content extends Component {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
 
             return (
-                <div className={`w-100 my-2 contents rounded cursor-pointer post`} key={index} data-preview={`preview-${index}`}>
+                <div className={`w-100 my-2 contents rounded cursor-pointer overflow-visible`} onClick={this.onPostClick} onMouseEnter={this.onPostMouseEnter} onMouseLeave={this.onPostMouseLeave} key={index} data-preview={`${(data.noPreview) ? 0 : 1}`}>
                     <div className="pt-3 px-3">
-                        <div className="position-relative writer mb-2">
+                        <div className="position-relative mb-2">
 
-                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none" id={`hide-tooltip-${index}`} data-tooltip={`hide-tooltip-${index}`}>
+                            <div className="fw-600 fs-13px position-absolute hide-tooltips rounded p-1 text-center text-color-description d-none">
                                 &nbsp;Hide&nbsp;
                                 <div className="position-absolute pointer-tooltip-write">
                                     <FaPlay style={{color : '#404040'}}/>
                                 </div>
                             </div>
 
-                            <div className="position-absolute hide-post p-1 hide-tooltip" data-tooltip={`hide-tooltip-${index}`}>
-                                <img data-tooltip={`hide-tooltip-${index}`} src={timesSVG} alt=""/>
+                            <div className="position-absolute hide-post p-1 hide-tooltip" onMouseEnter={this.onHideTooltipMouseEnter} onMouseLeave={this.onHideTooltipMouseLeave}>
+                                <img src={timesSVG} alt=""/>
                             </div>
 
                             <div className="text-color-title fs-13px">
@@ -72,14 +116,14 @@ export default class Content extends Component {
                                                 &nbsp;&nbsp;Posted by&nbsp;
                                                 <span className="cursor-pointer hover-underline">{data.writer}</span>
                                                 &nbsp;
-                                                <div className={`position-relative d-inline-block ${data.isMod != null || data.isAdmin != null ? '' : 'd-none'}`}>
+                                                <div onMouseLeave={this.onWriterTooltipMouseLeave} onMouseEnter={this.onWriterTooltipMouseEnter} className={`position-relative d-inline-block ${data.isMod != null || data.isAdmin != null ? '' : 'd-none'}`}>
                                                     <div className="position-absolute writer-tooltips rounded p-1 text-center d-none" id={`tooltip-${index}`}>
                                                         {data.isMod ? 'Moderator' : 'Admin'}
                                                         <div className="position-absolute pointer-tooltip-write">
                                                             <FaPlay style={{color : '#404040'}}/>
                                                         </div>
                                                     </div>
-                                                    <img className="writer-tooltip" data-tooltip={`tooltip-${index}`} src={data.isMod ? modSVG : adminSVG} alt=""/>
+                                                    <img src={data.isMod ? modSVG : adminSVG} alt=""/>
                                                 </div>
                                                 
                                                 &nbsp;·&nbsp;
@@ -219,7 +263,6 @@ export default class Content extends Component {
                             <img src={penSVG} alt=""/>&nbsp;&nbsp;Post
                         </div>
                     </div>
-
                 </div>
 
                 <InfiniteScroll

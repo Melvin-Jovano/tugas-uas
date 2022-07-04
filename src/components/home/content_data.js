@@ -14,7 +14,7 @@ export const contentData = [
         shares : '19',
         desc : 
         `
-            <div id='post-preview-0'>
+            <div>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     Yes they did.
                     <br /><br />
@@ -30,7 +30,7 @@ export const contentData = [
                 </div>
             </div>
 
-            <div id='remove-preview-0' class='d-none'>
+            <div class='d-none'>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3">
                     Yes they did.
                     <br /><br />
@@ -66,7 +66,7 @@ export const contentData = [
         shares : '1',
         desc : 
         `
-            <div id='post-preview-1'>
+            <div>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     Scientists have proven for the first time that viruses can survive and remain infectious by binding themselves to microplastics in freshwater.
 
@@ -80,7 +80,7 @@ export const contentData = [
                 </div>
             </div>
             
-            <div id='remove-preview-1' class='d-none'>
+            <div class='d-none'>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     Scientists have proven for the first time that viruses can survive and remain infectious by binding themselves to microplastics in freshwater.
                 </div>
@@ -111,7 +111,7 @@ export const contentData = [
         shares : '22',
         desc : 
         `
-            <div id='post-preview-2'>
+            <div>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     This little bugger.?
 
@@ -125,7 +125,7 @@ export const contentData = [
                 </div>
             </div>
 
-            <div id='remove-preview-2' class='d-none'>
+            <div class='d-none'>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     This little bugger.?
                 </div>
@@ -155,7 +155,7 @@ export const contentData = [
         shares : '121',
         desc : 
         `
-            <div id='post-preview-3'>
+            <div>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     Dior refused to drop Johnny Depp.
                     <br /><br />
@@ -171,7 +171,7 @@ export const contentData = [
                 </div>
             </div>
 
-            <div id='remove-preview-3' class='d-none'>
+            <div class='d-none'>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3">
                     Dior refused to drop Johnny Depp.
                 </div>
@@ -205,7 +205,7 @@ export const contentData = [
                 </div>
 
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3">
-                    Here’s Johnny looking fabulous for the campaign, and Dior Sauvage is the best-selling fragrance for men.
+                    Here's Johnny looking fabulous for the campaign, and Dior Sauvage is the best-selling fragrance for men.
                 </div>
             </div>
         `
@@ -225,7 +225,7 @@ export const contentData = [
         shares : '25',
         desc : 
         `
-            <div id='post-preview-4'>
+            <div>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3 position-relative">
                     That's one of the most unexpected situation for many of us because mostly we become so sad if someone do something with our educational documents because it takes various process and fines to get the new ones.
 
@@ -239,7 +239,7 @@ export const contentData = [
                 </div>
             </div>
 
-            <div id='remove-preview-4' class='d-none'>
+            <div class='d-none'>
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3">
                     That's one of the most unexpected situation for many of us because mostly we become so sad if someone do something with our educational documents because it takes various process and fines to get the new ones.
                 </div>
@@ -251,7 +251,6 @@ export const contentData = [
                 <div class="text-color-title fs-15px fw-600 pb-3 px-3">
                     But salute such a people who bear everything of them whom they like the most just take an example of the dog in the post below and he has torn and eaten his PhD's degree but still she's so calm and saying it's okay don't get angry on the animals because they don't have any idea of that.
                 </div>
-                
             </div>
         `
     },
@@ -269,6 +268,7 @@ export const contentData = [
         views : '143.1K',
         upvoted : '725',
         shares : '2',
+        noPreview : true,
         desc : 
         `
             <div class="text-color-title fs-15px fw-600 py-3 ">

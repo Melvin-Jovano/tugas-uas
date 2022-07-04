@@ -7,7 +7,7 @@ export default class ImproveYourFeed extends Component {
     constructor(props) {
         super();
         this.state = {
-            data : props.data
+            data : props.data,
         };
     }
     
