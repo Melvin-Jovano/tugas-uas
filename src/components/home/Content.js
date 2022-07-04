@@ -13,21 +13,32 @@ import shareSVG from './share.svg';
 import moreSVG from './more.svg';
 import {FaPlay} from 'react-icons/fa'
 import './content.css';
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export default class Content extends Component {
+    post;
     constructor(props) {
         super();
+        this.post = props.data;
         this.state = {
             data : props.data
         };
+
+        this.fetchMoreData = this.fetchMoreData.bind(this);
     }
     
+    fetchMoreData() {
+        this.setState({
+            data : this.state.data.concat(this.post)
+        });
+    }
+
     render() {
         const data = this.state.data.map((data, index) => {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
 
             return (
-                <div className="w-100 my-2 contents rounded" key={index}>
+                <div className={`w-100 my-2 contents rounded cursor-pointer post`} key={index} data-preview={`preview-${index}`}>
                     <div className="pt-3 px-3">
                         <div className="position-relative writer mb-2">
 
@@ -190,7 +201,7 @@ export default class Content extends Component {
                     <div className="d-flex align-items-center">
                         <img src="https://qph.fs.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={32} height={32} className="rounded-circle" alt=""/>
                         &nbsp;&nbsp;
-                        <div className="input-post px-2 py-1 w-100">
+                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="input-post px-2 py-1 w-100">
                             What do you want to ask or share?
                         </div>
                     </div>
@@ -211,7 +222,14 @@ export default class Content extends Component {
 
                 </div>
 
-                {data}
+                <InfiniteScroll
+                dataLength={this.state.data.length}
+                next={this.fetchMoreData}
+                hasMore={true}
+                loader={<h4>Loading...</h4>}
+                >
+                    {data}
+                </InfiniteScroll>
 
             </div>
         );

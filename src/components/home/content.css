@@ -2,6 +2,10 @@
     color: #B1B3B6;
 }
 
+.text-underline {
+    text-decoration: underline;
+}
+
 .fs-13px {
     font-size: 13px;
 }
@@ -11,7 +15,7 @@
 }
 
 .content {
-    width: 40%;
+    width: 38%;
 }
 
 .post-content {
@@ -185,8 +189,18 @@
     background-color: #404040;
 }
 
+.more-preview {
+    background-color: #262626;
+    box-shadow: 0 0 15px 15px #262626da;
+}
+
 .hide-tooltips {
     top: -38px;
     right: -4px;
     background-color: #404040;
+    z-index: 2;
+}
+
+.post:hover {
+    background-color: #ffffff14;
 }

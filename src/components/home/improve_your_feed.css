@@ -1,0 +1,53 @@
+.todo-container {
+    top: 10%;
+    width: 20%;
+    max-height: 90vh;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.undone:hover {
+    background-color:rgba(255,255,255,0.04)!important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-done {
+    color: #8E9092;
+    text-decoration: line-through;
+}
+
+.border-todo-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-bottodo-tom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fs-15px {
+    font-size: 15px;
+}
+
+.todo-box {
+    top: 10%;
+    background-color: #262626;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-color-title {
+    color: #D5D6D6;
+}

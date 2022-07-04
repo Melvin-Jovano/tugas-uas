@@ -32,10 +32,10 @@
     width : 14%;
     font-size: 13px;
     font-weight: 450;
-    left: 15%;
     color: #8e9092;
     overflow: auto;
     max-height: 90vh;
+    top: 10%;
 }
 
 .space-container::-webkit-scrollbar {

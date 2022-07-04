@@ -25,10 +25,9 @@ export default class Space extends Component {
         });
 
         return (
-            <div className="position-relative">
-                <div className="space-container position-relativ position-fixed">
+                <div className="space-container position-sticky">
 
-                    <div className="position-fixe">
+                    <div className="">
                         <div className="text-color-space fw-600 fs-13px d-flex align-items-center create-space-button p-2 rounded mb-1">
                             <div className="icon-bg-space rounded px-1">
                                 <img width={11} height={11} alt="" src={plusSVG}/>
@@ -48,9 +47,7 @@ export default class Space extends Component {
                             <span className="space-link">About</span> ·  <span className="space-link">Careers</span> · <span className="space-link">Terms</span> · <span className="space-link">Privacy</span> · <span className="space-link">Acceptable Use</span> · <span className="space-link">Businesses</span> · <span className="space-link">Press</span> · <span className="space-link">Your Ad Choices</span>
                         </div>
                     </div>
-
-                    </div>
-            </div>
+                </div>
         );
     }
 }
