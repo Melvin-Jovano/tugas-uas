@@ -25,10 +25,10 @@ export default class Space extends Component {
         });
 
         return (
-            <div className="position-relative">
-                <div className="space-container position-relativ position-fixed">
+            // <div className="position-relative bg-light">
+                <div className="space-container position-sticky">
 
-                    <div className="position-fixe">
+                    <div className="sticky-top">
                         <div className="text-color-space fw-600 fs-13px d-flex align-items-center create-space-button p-2 rounded mb-1">
                             <div className="icon-bg-space rounded px-1">
                                 <img width={11} height={11} alt="" src={plusSVG}/>
@@ -50,7 +50,7 @@ export default class Space extends Component {
                     </div>
 
                     </div>
-            </div>
+            // </div>
         );
     }
 }
