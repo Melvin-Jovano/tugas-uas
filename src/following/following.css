@@ -1,5 +1,5 @@
 .following{
-    width: 40%;
+    width: 38%;
 }
 .title{
     font-weight: bold;
@@ -26,7 +26,7 @@
 }
 .content-wrap{
     display: flex;
-    border-top: 1px solid #464646;
+    border-bottom: 1px solid #464646;
     padding: 10px;
 }
 
@@ -38,4 +38,11 @@
 }
 .text-build, .subtext-build{
     color: #cdcdcd;
+}
+.todo-container {
+    top: 10%;
+    width: 20%;
+    max-height: 90vh;
+    margin-left: 20px;
+    overflow: auto;
 }
