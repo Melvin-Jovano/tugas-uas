@@ -11,6 +11,9 @@ import searchSVG from './search.svg';
 import pencilSVG from './pencil.svg';
 import {logoSVG} from './logoSVG';
 import {noteSVG} from './noteSVG';
+import timesSVG from '../home/times.svg'
+import arrowRightSVG from './arrow_right.svg'
+import peopleSVG from './people.svg'
 import {FaPlay} from 'react-icons/fa'
 
 export default class Navbar extends Component {
@@ -32,21 +35,37 @@ export default class Navbar extends Component {
         return (
             <Fragment>
                 <div className="modal fade" id="modalCreatePostNavbar" tabIndex="-1" role="dialog" aria-labelledby="modalCreatePostNavbarTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" role="document">
-                        <div className="modal-content modal-create-post-navbar">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            ...
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
+                    <div className="modal-dialog a modal-dialog-centered" role="document">
+                        <div className="modal-content p-0">
+                            <div className="modal-body p-0">
+                                <div className="d-flex">
+                                    <div className="flex-grow-5 p-2">
+                                        <img src={timesSVG} alt=""/>
+                                    </div>
+
+                                    <div className="fw-600 flex-grow-1 text-center text-color-title py-2">
+                                        Add Question
+                                    </div>
+
+                                    <div className="fw-600 flex-grow-1 text-center text-color-title py-2">
+                                        Create Post
+                                    </div>
+                                </div>
+
+                                <div className="p-3 d-flex align-items-center">
+                                    <img className="rounded-circle" width={18} height={18} src="https://qph.cf2.quoracdn.net/main-thumb-750310938-200-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" alt=""/>
+                                    <img src={arrowRightSVG} alt="" width={12} height={12} className="mx-2"/>
+                                    <div className="d-flex align-items-center">
+                                        <div className="quora-plus cursor-pointer fw-600 text-main-color-navbar badge-navbar px-2 py-1 align-items-center">
+                                            <img alt="" src={peopleSVG} width={20} height={20}/>
+                                            &nbsp;
+                                            Public
+                                            &nbsp;
+                                            <img alt="" src={arrowBottomSVG} width={16} height={16}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +119,7 @@ export default class Navbar extends Component {
                             </div>
 
                             <div className="d-flex align-items-center mx-2">
-                                <div className="fw-600 text-main-color-navbar badge-navbar px-3 py-1">
+                                <div className="quora-plus cursor-pointer fw-600 text-main-color-navbar badge-navbar px-3 py-1">
                                     Try Quora+
                                 </div>
                             </div>

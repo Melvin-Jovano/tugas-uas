@@ -301,7 +301,7 @@ export default class Content extends Component {
                     </div>
                     
                     <div className="d-flex justify-content-evenly mt-1 ">
-                        <div className="d-flex align-items-center post-button py-1 px-5">
+                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
                             <img src={askSVG} alt=""/>&nbsp;&nbsp;Ask
                         </div>
 
@@ -309,7 +309,7 @@ export default class Content extends Component {
                             <img src={answerSVG} alt=""/>&nbsp;&nbsp;Answer
                         </div>
 
-                        <div className="d-flex align-items-center post-button py-1 px-5">
+                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
                             <img src={penSVG} alt=""/>&nbsp;&nbsp;Post
                         </div>
                     </div>

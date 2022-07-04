@@ -51,6 +51,18 @@
     z-index: 3;
 }
 
+.a {
+    width: 60vw!important;
+}
+
+.text-color-title {
+    color: #D5D6D6;
+}
+
+.quora-plus:hover {
+    background-color: #181818;
+}
+
 .pointer-tooltip-navbar {
     color: #262626;
     top: -10px;

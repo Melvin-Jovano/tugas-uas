@@ -16,10 +16,12 @@ class Following extends React.Component{
     }
     
     render() {
-        const followingData = this.state.data.map((data) => {
-            data.map((item)=>{
-                return(
-                    <div className="content-wrap">
+        const followingList = [];
+
+        this.state.data.forEach((data, idx) => {
+            data.forEach((item, index)=>{
+                followingList.push(
+                    <div className="content-wrap" key={`${index}${idx}`}>
                         <img  className="img-content" alt="" src={item.img} width={40} height={40} />
                         <div className="text-body">
                             <span className="title">{item.title}</span>
@@ -27,20 +29,11 @@ class Following extends React.Component{
                             <span className="text">{item.text}</span>
                         </div>
                     </div>
-                )
+                );
             });
-            return (
-                <div className="content-wrap">
-                    <img  className="img-content" alt="" src={data.img} width={40} height={40} />
-                    <div className="text-body">
-                        <span className="title">{data.title}</span>
-                        <span className="subtitle">{data.subtitle}</span>
-                        <span className="text">{data.text}</span>
-                    </div>
-                </div>    
-            );
+
         }); 
-        
+
         return(
             <Fragment>
                 <Navbar activeIndex={2}/>
@@ -60,13 +53,13 @@ class Following extends React.Component{
                             <div className="row" style={{ background : "#262626", height : "40px"}}>
                                 <h6 className="text-light mt-2">Spaces you might like</h6>
                             </div>
-                            {followingData}
+                            {followingList}
 
                             {/* Technology */}
                             <div className="row" style={{ background : "#262626", height : "40px"}}>
                                 <h6 className="text-light mt-2">Technology</h6>
                             </div>
-                            {followingData}
+                            {followingList}
                         </div>
 
                         <div className="todo-container">
