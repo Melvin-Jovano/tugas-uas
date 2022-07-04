@@ -1,5 +1,6 @@
 .navbar-component {
     background-color: #262626!important;
+    z-index: 3;
 }
 
 .text-main-color-navbar {
@@ -47,7 +48,7 @@
     bottom: -32px;
     right: -35px;
     color: #D5D6D6;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pointer-tooltip-navbar {
@@ -57,10 +58,6 @@
     transform: rotate(30deg);
 }
 
-.modal-tooltip-remover-navbar {
-    z-index: 1;
-}
-
 .modal-create-post-navbar {
-    background-color: #393839;;
+    background-color: #393839;
 }
