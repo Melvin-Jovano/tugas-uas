@@ -35,15 +35,4 @@ $(document).ready(() => {
     $('.hide-tooltip').hover((element) => {
         $(`#${element.currentTarget.getAttribute('data-tooltip')}`).toggleClass('d-none');
     });
-
-    $('.post').hover((element) => {
-        console.log(element);
-        $(`#${element.currentTarget.getAttribute('data-preview')}`).toggleClass('text-underline');
-    });
-
-    $('.post').click((element) => {
-        $(`#${element.currentTarget.getAttribute('data-preview')}`).addClass('d-none');
-        $(`#post-${element.currentTarget.getAttribute('data-preview')}`).addClass('d-none');
-        $(`#remove-${element.currentTarget.getAttribute('data-preview')}`).removeClass('d-none');
-    });
 });

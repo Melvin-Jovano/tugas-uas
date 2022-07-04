@@ -21,7 +21,7 @@ export default class Content extends Component {
         super();
         this.post = props.data;
         this.state = {
-            data : props.data
+            data : props.data,
         };
 
         this.fetchMoreData = this.fetchMoreData.bind(this);
@@ -29,8 +29,36 @@ export default class Content extends Component {
     
     fetchMoreData() {
         this.setState({
-            data : this.state.data.concat(this.post)
+            data : this.state.data.concat(this.post),
         });
+    }
+
+    onPostMouseEnter(element) {
+        try {
+            element.currentTarget.getElementsByTagName('div')[13].classList.add('text-underline');
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    onPostMouseLeave(element) {
+        try {
+            element.currentTarget.getElementsByTagName('div')[13].classList.remove('text-underline');
+        } catch (error) {
+            return
+        }
+    }
+
+    onPostClick(element) {
+        try {
+            if(element.currentTarget.dataset.preview === '1') {
+                element.currentTarget.getElementsByTagName('div')[11].classList.add('d-none');
+                element.currentTarget.getElementsByTagName('div')[13].classList.add('d-none');
+                element.currentTarget.getElementsByTagName('div')[15].classList.remove('d-none');
+            }
+        } catch (error) {
+            return
+        }
     }
 
     render() {
@@ -38,7 +66,7 @@ export default class Content extends Component {
             const title = (data.title) ? <div className="d-inline cursor-pointer fs-16px hover-underline text-color-title-post fw-bolder">{data.title}</div> : <div></div>;
 
             return (
-                <div className={`w-100 my-2 contents rounded cursor-pointer post`} key={index} data-preview={`preview-${index}`}>
+                <div className={`w-100 my-2 contents rounded cursor-pointer post`} onClick={this.onPostClick} onMouseEnter={this.onPostMouseEnter} onMouseLeave={this.onPostMouseLeave} key={index} data-preview={`${(data.noPreview) ? 0 : 1}`}>
                     <div className="pt-3 px-3">
                         <div className="position-relative writer mb-2">
 
