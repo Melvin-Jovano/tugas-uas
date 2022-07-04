@@ -134,7 +134,7 @@
     text-decoration: underline;
 }
 
-.followButton:hover{
+.followButton:hover, .popIcon:hover, .close:hover, .viewMore:hover{
     background-color: rgba(255, 255, 255, 0.04) !important;
 }
 
@@ -147,21 +147,59 @@
     left: 15%;
 }
 
-.popIcon:hover{
-    background-color: rgba(255, 255, 255, 0.04) !important;
-}
-
 .dotsIcon{
     top: 12%;
     left: 10%;
-}
-
-.viewMore:hover{
-    background-color: rgba(255, 255, 255, 0.04);
 }
 
 .invitesTitle{
     color: #d5d6d6;
     font-weight: 500;
     border-bottom: solid 1px #393839;
+}
+
+.close{
+    color: rgb(213, 214, 214);
+    font-size: 24px;
+    height: 38px;
+    width: 38px;
+}
+
+.closeIcon{
+    top: -2px;
+    left: 0;
+    padding: 0 7px;
+}
+
+.modal-content{
+    border: solid 1px #393839;
+    background-color: #181818;
+}
+
+.modalTitle{
+    border-bottom: solid 1px #393839;
+}
+
+.modalInput{
+    border: solid 1px #393839 !important;
+    color: rgb(213, 214, 214);
+    font-size: 15px;
+}
+
+.modalInput:hover{
+    border-color: #4894fd !important;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    color: rgb(213, 214, 214);
+}
+
+.modal-footer{
+    border-top: solid 1px #393839 !important;
+}
+
+.createButton{
+    font-size: 14px !important;
+    font-weight: 500;
 }
