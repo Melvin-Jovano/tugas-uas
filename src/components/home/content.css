@@ -198,6 +198,7 @@
     top: -38px;
     right: -4px;
     background-color: #404040;
+    z-index: 2;
 }
 
 .post:hover {

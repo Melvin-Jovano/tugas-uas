@@ -34,7 +34,7 @@ export default class ImproveYourFeed extends Component {
                         <div className="py-2 px-3 fs-15px border-todo-top">
                             <img src={checkSVG} width={16} height={16} alt=""/>
                             &nbsp;&nbsp;
-                            <span className="fs-13px text-done">Upvote 2 more good pieces of content</span>
+                            <span className="fs-13px text-done">Upvote 2 pieces of content</span>
                         </div>
 
                         <div className="py-2 px-3 fs-15px border-todo-top">
@@ -43,7 +43,7 @@ export default class ImproveYourFeed extends Component {
                             <span className="fs-13px text-done">Answer a question</span>
                         </div>
 
-                        <div className="py-2 px-3 fs-15px border-todo-top undone cursor-pointer">
+                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="py-2 px-3 fs-15px border-todo-top undone cursor-pointer">
                             <img src={checkboxSVG} width={16} height={16} alt=""/>
                             &nbsp;&nbsp;
                             <span className="fs-13px">Ask a question</span>

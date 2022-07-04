@@ -201,7 +201,7 @@ export default class Content extends Component {
                     <div className="d-flex align-items-center">
                         <img src="https://qph.fs.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={32} height={32} className="rounded-circle" alt=""/>
                         &nbsp;&nbsp;
-                        <div className="input-post px-2 py-1 w-100">
+                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="input-post px-2 py-1 w-100">
                             What do you want to ask or share?
                         </div>
                     </div>

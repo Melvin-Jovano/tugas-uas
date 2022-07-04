@@ -51,8 +51,6 @@ export default class Navbar extends Component {
                     </div>
                 </div>
 
-                <div id="modal-tooltip-remover-navbar" className="d-none modal-tooltip-remover-navbar position-absolute vw-100 vh-100"></div>
-
                 <div className="position-relative mb-2">
                     <nav className="navbar-component position-fixed w-100">
                         <div className="d-flex justify-content-center">
@@ -115,12 +113,12 @@ export default class Navbar extends Component {
                                 <img src={globeSVG} width={24} height={24} className="rounded-circle" alt=""/>
                             </div>
 
-                            <div className="d-flex align-items-center mx-2">
-                                <div className="btn d-flex align-items-center position-relative button-tooltip-navbar text-light fw-600 py-1 pl-3 border-0">
+                            <div data-modal="tooltip-navbar" className="d-flex align-items-center mx-2">
+                                <div data-modal="tooltip-navbar" className="btn d-flex align-items-center position-relative button-tooltip-navbar text-light fw-600 py-1 pl-3 border-0">
                                     Add Question
                                     &emsp;
-                                    <div id="tooltip-navbar">
-                                        <img src={arrowBottomSVG} alt=""/>
+                                    <div data-modal="tooltip-navbar">
+                                        <img data-modal="tooltip-navbar" src={arrowBottomSVG} alt=""/>
                                     
                                         <div id="modal-tooltip-navbar" data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-none align-items-center position-absolute tooltip-badge-navbar px-2 py-1">
                                             <div className="position-absolute pointer-tooltip-navbar">
