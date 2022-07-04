@@ -1,0 +1,41 @@
+.following{
+    width: 40%;
+}
+.title{
+    font-weight: bold;
+    color: #cdcdcd;
+}
+.text-body{
+    display: grid;
+}
+.text-body .title{
+    font-size: 16px;
+    color: aliceblue;
+}
+.text-body .subtitle{
+    font-size: 13px;
+    color: #8e9092;
+}
+.text-body .text{
+    color: #d5d6d6;
+    font-size: 13px;
+}
+.img-content{
+    margin-right: 10px;
+    border-radius: 33.33%;
+}
+.content-wrap{
+    display: flex;
+    border-top: 1px solid #464646;
+    padding: 10px;
+}
+
+.content-wrap:hover{
+    background: #262626;
+}
+.box-build{
+    text-align: center;
+}
+.text-build, .subtext-build{
+    color: #cdcdcd;
+}
