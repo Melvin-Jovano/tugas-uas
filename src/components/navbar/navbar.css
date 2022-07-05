@@ -7,6 +7,10 @@
     color: #b1b3b6;
 }
 
+.text-color-title {
+    color: #D5D6D6;
+}
+
 .input-navbar {
     background-color: #181818;
     font-size: 12px;
@@ -49,6 +53,75 @@
     right: -35px;
     color: #D5D6D6;
     z-index: 3;
+}
+
+.rec-box {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rec-box:hover {
+    background-color:rgba(255,255,255,0.04)!important;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.fs-18px {
+    font-size: 18px;
+}
+
+.text-answers {
+    color: #8e9092;
+
+}
+
+.input-create-post {
+    background-color: transparent;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-on-hover:hover {
+    background-color:rgba(75, 75, 75, 0.1);
+}
+
+.border-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.add-panel {
+    border-bottom: 3px solid #2e69ff!important;
+}
+
+.cancel-question:hover {
+    background-color:rgba(75, 75, 75, 0.1);
+    border-radius: 20px;
+}
+
+.add-question {
+    background-color: #287DFF;
+    border-radius: 20px;
+}
+
+.input-create-post:hover {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2e69ff!important;
+}
+
+.text-color-title {
+    color: #D5D6D6;
+}
+
+.quora-plus:hover {
+    background-color: #181818;
 }
 
 .pointer-tooltip-navbar {
