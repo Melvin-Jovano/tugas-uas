@@ -32,6 +32,7 @@
 
 .content-wrap:hover{
     background: #262626;
+    cursor: pointer;
 }
 .box-build{
     text-align: center;

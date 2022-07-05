@@ -3,7 +3,10 @@ import Navbar from "../components/navbar/Navbar";
 import Space from '../components/home/Space';
 import { spaceData } from "../components/home/space_data";
 import './following.css'
-import { followingData } from "./following_data";
+import { followingData } from "./data/following_data";
+import FollowingTechnology from "./FollowingTechnology";
+import FollowingJsProgramming from "./FollowingJsProgramming"
+import FollowingWebDesign from "./FollowingWebDesign";
 
 class Following extends React.Component{
 
@@ -16,22 +19,17 @@ class Following extends React.Component{
     }
     
     render() {
-        const followingList = [];
-
-        this.state.data.forEach((data, idx) => {
-            data.forEach((item, index)=>{
-                followingList.push(
-                    <div className="content-wrap" key={`${index}${idx}`}>
-                        <img  className="img-content" alt="" src={item.img} width={40} height={40} />
-                        <div className="text-body">
-                            <span className="title">{item.title}</span>
-                            <span className="subtitle">{item.subtitle}</span>
-                            <span className="text">{item.text}</span>
-                        </div>
+        const followingList = this.state.data.map((data, index) => {
+            return(
+                <div className="content-wrap" key={index}>
+                    <img  className="img-content" alt="" src={data.img} width={40} height={40} />
+                    <div className="text-body">
+                        <span className="title">{data.title}</span>
+                        <span className="subtitle">{data.subtitle}</span>
+                        <span className="text">{data.text}</span>
                     </div>
-                );
-            });
-
+                </div>
+            )
         }); 
 
         return(
@@ -56,10 +54,22 @@ class Following extends React.Component{
                             {followingList}
 
                             {/* Technology */}
-                            <div className="row" style={{ background : "#262626", height : "40px"}}>
+                            <div className="row mt-4" style={{ background : "#262626", height : "40px"}}>
                                 <h6 className="text-light mt-2">Technology</h6>
                             </div>
-                            {followingList}
+                            <FollowingTechnology />
+
+                            {/* JavaScript (programming language) */}
+                            <div className="row mt-4" style={{ background : "#262626", height : "40px"}}>
+                                <h6 className="text-light mt-2">JavaScript (programming language)</h6>
+                            </div>
+                            <FollowingJsProgramming />
+
+                            {/* Web Design*/}
+                            <div className="row mt-4" style={{ background : "#262626", height : "40px"}}>
+                                <h6 className="text-light mt-2">Web Design</h6>
+                            </div>
+                            <FollowingWebDesign />
                         </div>
 
                         <div className="todo-container">
