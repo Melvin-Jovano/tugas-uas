@@ -197,6 +197,7 @@
 .form-control:focus{
     box-shadow: none;
     color: rgb(213, 214, 214);
+    border-color: #4894fd !important;
 }
 
 .modal-footer{
