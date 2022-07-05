@@ -8,10 +8,17 @@ import SpacesTitle from "./spacesTitle";
 import "./Spaces.css";
 
 class spaces extends React.Component{
+    constructor(){
+        super();
+        this.scroll = React.createRef();
+    }
+    handleScrollClick = ()=>{
+        this.scroll.current.scrollIntoView({behavior:"smooth"})
+    }
     render(){
         return(
             <Fragment>
-                <div className="modal fade" id="createSpaceModal" tabIndex="-1" role="dialog" aira-labelledby="createSpaceLabel" aria-hidden="true">
+                <div className="modal fade" id="createSpaceModal" tabIndex="-1" role="dialog" aria-labelledby="createSpaceLabel" aria-hidden="true" data-backdrop="static">
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
                             <div className="modal-header py-2 ps-1 pe-2 border-0">
@@ -39,7 +46,7 @@ class spaces extends React.Component{
                                                 </div>
                                             </div>
                                             <div className="input-group">
-                                                <input type="text" className="form-control bg-transparent rounded modalInput" value="Kevin's Space"/>
+                                                <input type="text" className="form-control bg-transparent rounded modalInput" value="Altair's Space"/>
                                             </div>
                                             <div className="mt-2" style={{fontSize:13, color:"#328f5a"}}>
                                                 This name is available.
@@ -81,7 +88,7 @@ class spaces extends React.Component{
                                                 <div className="ms-1" style={{fontSize:13, fontWeight:"500"}}>Create a Space</div>
                                             </div>
                                         </button>
-                                        <button className="bg-transparent rounded-pill welcomeButton">
+                                        <button className="bg-transparent rounded-pill welcomeButton" onClick={this.handleScrollClick}>
                                             <div className="d-flex align-items-center">
                                                 <IoCompassOutline style={{fontSize:20}}/>
                                                 <div className="ms-1" style={{fontSize:13, fontWeight:"500"}}>Discover Spaces</div>
@@ -90,7 +97,7 @@ class spaces extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-4">
+                            <div className="mt-4 discoverSpaces" ref={this.scroll}>
                                 <span className="fw-bold" style={{color:"#cdcdcd", fontSize:"21px"}}>Discover Spaces</span>
                             </div>
                             <SpacesTitle/>

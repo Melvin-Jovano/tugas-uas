@@ -27,6 +27,10 @@
     background-color: rgba(72, 148, 253, 0.06) !important;
 }
 
+.discoverSpaces{
+    scroll-margin-top: 50px;
+}
+
 .boxTitle{
     margin-bottom: 16px;
     font-size: 15px;

@@ -73,10 +73,10 @@ class SpacesItem extends React.Component{
                             </div>
                         </button>
                         <div className="d-flex">
-                            <button typeof="button" data-bs-toggle="tooltip" data-bs-placement="top" title="More sharing options" className="popIcon rounded-circle position-relative bg-transparent border-0" style={{padding:"0 5px", width:30, height: 30}}>
+                            <button type="button" title="More sharing options" className="popIcon rounded-circle position-relative bg-transparent border-0" style={{padding:"0 5px", width:30, height: 30}}>
                                 <RiShareForwardLine style={{fontSize:20, color:"#b1b3b6"}} className="position-absolute shareIcon" />
                             </button>
-                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="More" className="popIcon rounded-circle position-relative bg-transparent border-0" style={{padding:"0 5px", width:30, height: 30}}>
+                            <button type="button" title="More" className="popIcon rounded-circle position-relative bg-transparent border-0" style={{padding:"0 5px", width:30, height: 30}}>
                                 <svg width="24" height="24"xmlns="http://www.w3.org/2000/svg" className="position-absolute dotsIcon" >
                                     <path d="M5 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" class="icon_svg-stroke" stroke-width="1.5" stroke="#666" fill="none" style={{stroke:"#b1b3b6"}}></path>
                                 </svg>
