@@ -14,6 +14,7 @@ import moreSVG from './more.svg';
 import {FaPlay} from 'react-icons/fa'
 import './content.css';
 import InfiniteScroll from "react-infinite-scroll-component";
+import CreateContent from "./CreateContent";
 
 export default class Content extends Component {
     constructor(props) {
@@ -21,15 +22,39 @@ export default class Content extends Component {
         this.post = props.data;
         this.state = {
             data : props.data,
+            isPosted : false
         };
 
         this.fetchMoreData = this.fetchMoreData.bind(this);
+        this.createPost = this.createPost.bind(this);
+    }
+
+    createPost(data) {
+        this.props.isPosted();
+        
+        if (data.currentTarget.dataset.text.length > 0) this.setState({
+            isPosted : true,
+            data : [{
+                space : 'Questions',
+                writerImg : 'https://qph.fs.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg',
+                writer : 'Altair',
+                title : data.currentTarget.dataset.text,
+                createdAt : '2s ago',
+                upvote : '0',
+                shared : '0',
+                comments : '0',
+                views : '0',
+                upvoted : '0',
+                shares : '0',
+                desc : ''
+            }].concat(this.state.data)
+        });
     }
     
     fetchMoreData() {
         setTimeout(() => {
             this.setState({
-                data : this.state.data.concat(this.post),
+                data : this.state.data.concat(this.post)
             });
         }, 3000);
     }
@@ -290,50 +315,53 @@ export default class Content extends Component {
         });
 
         return (
-            <div className="mx-2 content">
-                <div className="post-content pt-3 px-3 pb-1 rounded fs-13px fw-600">
-                    <div className="d-flex align-items-center">
-                        <img src="https://qph.fs.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={32} height={32} className="rounded-circle" alt=""/>
-                        &nbsp;&nbsp;
-                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="input-post px-2 py-1 w-100">
-                            What do you want to ask or share?
+            <>
+                <CreateContent createPost={this.createPost}/>
+                
+                <div className="mx-2 content">
+                    <div className="post-content pt-3 px-3 pb-1 rounded fs-13px fw-600">
+                        <div className="d-flex align-items-center">
+                            <img src="https://qph.fs.quoracdn.net/main-thumb-750310938-50-vqunkwslayskhlspuddbrbcefzltdjge.jpeg" width={32} height={32} className="rounded-circle" alt=""/>
+                            &nbsp;&nbsp;
+                            <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="input-post px-2 py-1 w-100">
+                                What do you want to ask or share?
+                            </div>
+                        </div>
+                        
+                        <div className="d-flex justify-content-evenly mt-1 ">
+                            <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
+                                <img src={askSVG} alt=""/>&nbsp;&nbsp;Ask
+                            </div>
+
+                            <div className="d-flex align-items-center post-button py-1 px-5">
+                                <img src={answerSVG} alt=""/>&nbsp;&nbsp;Answer
+                            </div>
+
+                            <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
+                                <img src={penSVG} alt=""/>&nbsp;&nbsp;Post
+                            </div>
                         </div>
                     </div>
-                    
-                    <div className="d-flex justify-content-evenly mt-1 ">
-                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
-                            <img src={askSVG} alt=""/>&nbsp;&nbsp;Ask
-                        </div>
 
-                        <div className="d-flex align-items-center post-button py-1 px-5">
-                            <img src={answerSVG} alt=""/>&nbsp;&nbsp;Answer
-                        </div>
-
-                        <div data-toggle="modal" data-target="#modalCreatePostNavbar" className="d-flex align-items-center post-button py-1 px-5">
-                            <img src={penSVG} alt=""/>&nbsp;&nbsp;Post
-                        </div>
-                    </div>
+                    <InfiniteScroll
+                    dataLength={this.state.data.length}
+                    next={this.fetchMoreData}
+                    hasMore={true}
+                    loader={
+                        <center className="my-3">
+                            <span className="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                            &nbsp;
+                            <span className="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                            &nbsp;
+                            <span className="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
+                        </center>
+                    }
+                    style={{overflow : 'visible'}}
+                    >
+                        {data}
+                    </InfiniteScroll>
                 </div>
-
-                <InfiniteScroll
-                dataLength={this.state.data.length}
-                next={this.fetchMoreData}
-                hasMore={true}
-                loader={
-                    <center class="my-3">
-                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
-                        &nbsp;
-                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
-                        &nbsp;
-                        <span class="spinner-grow spinner-grow-sm bg-light" role="status" aria-hidden="true"></span>
-                    </center>
-                }
-                style={{overflow : 'visible'}}
-                >
-                    {data}
-                </InfiniteScroll>
-
-            </div>
+            </>
         );
     }
 }

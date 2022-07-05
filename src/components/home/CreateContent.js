@@ -5,19 +5,25 @@ import peopleSVG from './people.svg'
 import arrowBottomSVG from '../navbar/arrow_bottom.svg';
 
 export default class CreateContent extends Component {
-    constructor(props) {
+    constructor() {
         super();
         this.questions = ['what', 'how', 'when', 'why', 'who', 'where'];
         this.state = {
             keyword : '',
             reccomendation : []
         };
-
         this.onKeyUpKeyword = this.onKeyUpKeyword.bind(this);
+        this.onAnswersClick = this.onAnswersClick.bind(this);
     }
 
     randomIntFromInterval(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    onAnswersClick(element) {
+        this.setState({
+            keyword : element.currentTarget.dataset.text
+        });
     }
 
     onKeyUpKeyword(element) {
@@ -28,9 +34,10 @@ export default class CreateContent extends Component {
             if (value.includes(`${question} is `)) {
                 const v = value.replace(`${question} is `, '');
                 if(v !== '') this.questions.forEach((quest, idx) => {
+                    const text = `${quest} is ${v}`;
                     recList.push(
-                        <div key={`${index}${idx}`} className="py-2 rec-box cursor-pointer">
-                            <span>{quest} is {v}</span>
+                        <div data-text={text} onClick={this.onAnswersClick} key={`${index}${idx}`} className="py-2 rec-box cursor-pointer">
+                            <span>{text}</span>
                             <br />
                             <span className="fw-600 text-answers">{this.randomIntFromInterval(0, 40)} Answers</span>
                         </div>
@@ -40,6 +47,7 @@ export default class CreateContent extends Component {
         });
 
         this.setState({
+            keyword : element.currentTarget.value,
             reccomendation : recList
         });
     }
@@ -79,7 +87,7 @@ export default class CreateContent extends Component {
                             </div>
 
                             <div className="px-3 pt-1">
-                                <input onKeyUp={this.onKeyUpKeyword} placeholder='Start your question with "What", "How", "Why", etc.' className="w-100 input-create-post fw-600 py-2 fs-18px text-color-title"/>
+                                <input value={this.state.keyword} onChange={this.onKeyUpKeyword} placeholder='Start your question with "What", "How", "Why", etc.' className="w-100 input-create-post fw-600 py-2 fs-18px text-color-title"/>
                             </div>
 
                             <div className="px-3 pt-1 pb-2">
@@ -94,7 +102,7 @@ export default class CreateContent extends Component {
                                 <div className="cursor-pointer p-2 px-3 fs-14px fw-600 text-main-color-navbar cancel-question" data-dismiss="modal">
                                     Cancel
                                 </div>
-                                <div className="add-question fs-14px fw-600 text-white cursor-pointer p-2">
+                                <div data-text={`${this.state.keyword}`} data-dismiss="modal" onClick={this.props.createPost} className="add-question fs-14px fw-600 text-white cursor-pointer p-2">
                                     Add Question
                                 </div>
                             </div>

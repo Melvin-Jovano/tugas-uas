@@ -12,7 +12,6 @@ import pencilSVG from './pencil.svg';
 import {logoSVG} from './logoSVG';
 import {noteSVG} from './noteSVG';
 import {FaPlay} from 'react-icons/fa'
-import CreateContent from "../home/CreateContent";
 
 export default class Navbar extends Component {
 
@@ -32,7 +31,6 @@ export default class Navbar extends Component {
     render() {
         return (
             <Fragment>
-                <CreateContent />
 
                 <div className="position-relative mb-2">
                     <nav className="navbar-component position-fixed w-100">
